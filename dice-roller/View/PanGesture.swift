@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PanGesture.swift
 //  dice-roller
 //
 //  Created by Zakary Kurzawski on 1/12/18.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-class DiceRollerVC: UIViewController {
+class PanGesture: UIPanGestureRecognizer {
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+    
 }
-

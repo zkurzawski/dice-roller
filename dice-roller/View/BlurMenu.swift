@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BlurMenu.swift
 //  dice-roller
 //
 //  Created by Zakary Kurzawski on 1/12/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DiceRollerVC: UIViewController {
+class BlurMenu: UIVisualEffectView {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 20
     }
 
 }
-

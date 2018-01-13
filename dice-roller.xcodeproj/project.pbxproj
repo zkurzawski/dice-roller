@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3CB62E6520094E2800D8D72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E6420094E2800D8D72A /* AppDelegate.swift */; };
-		3CB62E6720094E2800D8D72A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E6620094E2800D8D72A /* ViewController.swift */; };
 		3CB62E6A20094E2800D8D72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6820094E2800D8D72A /* Main.storyboard */; };
 		3CB62E6C20094E2800D8D72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6B20094E2800D8D72A /* Assets.xcassets */; };
 		3CB62E6F20094E2800D8D72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6D20094E2800D8D72A /* LaunchScreen.storyboard */; };
 		3CB62E7A20094E2800D8D72A /* dice_rollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E7920094E2800D8D72A /* dice_rollerTests.swift */; };
 		3CB62E8520094E2800D8D72A /* dice_rollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */; };
+		3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */; };
+		3CB62E9A2009AF1800D8D72A /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E992009AF1800D8D72A /* PanGesture.swift */; };
+		3CB62E9C2009B7BB00D8D72A /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */; };
+		3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		3CB62E6120094E2800D8D72A /* dice-roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dice-roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E6420094E2800D8D72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CB62E6620094E2800D8D72A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CB62E6920094E2800D8D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CB62E6B20094E2800D8D72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CB62E6E20094E2800D8D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		3CB62E8020094E2800D8D72A /* dice-rollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dice-rollerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dice_rollerUITests.swift; sourceTree = "<group>"; };
 		3CB62E8620094E2800D8D72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerVC.swift; sourceTree = "<group>"; };
+		3CB62E992009AF1800D8D72A /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
+		3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,6 @@
 				3CB62E9220094EAB00D8D72A /* View */,
 				3CB62E9420094EC600D8D72A /* Controller */,
 				3CB62E6420094E2800D8D72A /* AppDelegate.swift */,
-				3CB62E6620094E2800D8D72A /* ViewController.swift */,
 				3CB62E6820094E2800D8D72A /* Main.storyboard */,
 				3CB62E6B20094E2800D8D72A /* Assets.xcassets */,
 				3CB62E6D20094E2800D8D72A /* LaunchScreen.storyboard */,
@@ -131,6 +136,9 @@
 		3CB62E9220094EAB00D8D72A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3CB62E992009AF1800D8D72A /* PanGesture.swift */,
+				3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */,
+				3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 		3CB62E9420094EC600D8D72A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB62E6720094E2800D8D72A /* ViewController.swift in Sources */,
+				3CB62E9C2009B7BB00D8D72A /* SlideMenu.swift in Sources */,
+				3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */,
+				3CB62E9A2009AF1800D8D72A /* PanGesture.swift in Sources */,
 				3CB62E6520094E2800D8D72A /* AppDelegate.swift in Sources */,
+				3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

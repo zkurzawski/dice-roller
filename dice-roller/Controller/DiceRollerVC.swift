@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DiceRollerVC.swift
 //  dice-roller
 //
 //  Created by Zakary Kurzawski on 1/12/18.
@@ -10,9 +10,12 @@ import UIKit
 
 class DiceRollerVC: UIViewController {
 
+    @IBOutlet weak var viewConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
+    }
 }
-
