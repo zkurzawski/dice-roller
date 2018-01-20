@@ -96,7 +96,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh">
+                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh" customClass="DiceSelector" customModule="dice_roller" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="102" width="290" height="41"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -109,9 +109,12 @@
                                                         <segment title="d10"/>
                                                         <segment title="d12"/>
                                                         <segment title="d20"/>
-                                                        <segment title="d100"/>
+                                                        <segment title="d%"/>
                                                     </segments>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="diceSelectionSegCntrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="kXX-7m-jox"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-vg-nEq">
                                                     <rect key="frame" x="110.66666666666669" y="50" width="99.333333333333314" height="22"/>
@@ -122,26 +125,41 @@
                                                     <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jUX-d4-0rt">
-                                                    <rect key="frame" x="44" y="318" width="232" height="31"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jUX-d4-0rt">
+                                                    <rect key="frame" x="28.333333333333343" y="317" width="264.66666666666663" height="31"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Traditional Look" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js9-7u-8as">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163" height="31"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjS-BC-e1D" customClass="SixSidedLabel" customModule="dice_roller" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="27.666666666666668" height="31"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                            <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-9b-dsA">
+                                                            <rect key="frame" x="67.666666666666671" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <connections>
+                                                                <action selector="sixSidedTypeChose:" destination="BYZ-38-t0r" eventType="valueChanged" id="YHX-QK-W3R"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traditional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js9-7u-8as" customClass="SixSidedLabel" customModule="dice_roller" customModuleProvider="target">
+                                                            <rect key="frame" x="156.66666666666666" y="0.0" width="107.99999999999997" height="31"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                             <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-9b-dsA">
-                                                            <rect key="frame" x="183" y="0.0" width="51" height="31"/>
-                                                            <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </switch>
                                                     </subviews>
                                                 </stackView>
-                                                <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-7Z-aAP">
-                                                    <rect key="frame" x="13" y="473" width="294" height="30"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" minimumValueImage="diceValue01" maximumValueImage="diceValue10" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-7Z-aAP">
+                                                    <rect key="frame" x="8" y="438.33333333333331" width="304" height="40"/>
+                                                    <connections>
+                                                        <action selector="diceSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zdb-j7-BfB"/>
+                                                    </connections>
                                                 </slider>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Number of Dice In Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-oM-bir">
-                                                    <rect key="frame" x="42.333333333333329" y="429" width="235.33333333333337" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Dice In Play: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-oM-bir">
+                                                    <rect key="frame" x="23" y="378" width="274" height="30.333333333333314"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="274" id="Ti4-xp-39L"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -169,13 +187,14 @@
                                                 <constraint firstItem="qV6-ig-ABW" firstAttribute="top" secondItem="5Tk-SI-UJh" secondAttribute="bottom" constant="20" id="QVX-NQ-deh"/>
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="UUz-z0-HqW"/>
                                                 <constraint firstItem="5Tk-SI-UJh" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="15" id="Wxn-nJ-ADA"/>
-                                                <constraint firstItem="nln-oM-bir" firstAttribute="top" secondItem="jUX-d4-0rt" secondAttribute="bottom" constant="80" id="bPh-KK-w5f"/>
+                                                <constraint firstItem="JZ3-7Z-aAP" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="10" id="Xbg-Cz-cq1"/>
+                                                <constraint firstItem="JZ3-7Z-aAP" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="YHl-pJ-yOf"/>
+                                                <constraint firstItem="nln-oM-bir" firstAttribute="top" secondItem="jUX-d4-0rt" secondAttribute="bottom" constant="30" id="bPh-KK-w5f"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="bWE-GB-oPA"/>
-                                                <constraint firstItem="JZ3-7Z-aAP" firstAttribute="top" secondItem="nln-oM-bir" secondAttribute="bottom" constant="15" id="fQV-Wf-koa"/>
+                                                <constraint firstAttribute="trailing" secondItem="JZ3-7Z-aAP" secondAttribute="trailing" constant="10" id="ef8-FN-x4O"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="50" id="g2T-LH-u6c"/>
-                                                <constraint firstItem="JZ3-7Z-aAP" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="15" id="le0-b5-Pny"/>
-                                                <constraint firstAttribute="trailing" secondItem="JZ3-7Z-aAP" secondAttribute="trailing" constant="15" id="n7P-eJ-lFZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="30" id="tix-VS-4xE"/>
+                                                <constraint firstItem="JZ3-7Z-aAP" firstAttribute="top" secondItem="nln-oM-bir" secondAttribute="bottom" constant="30" id="uLn-1H-NYu"/>
                                                 <constraint firstItem="5Tk-SI-UJh" firstAttribute="top" secondItem="gFX-vg-nEq" secondAttribute="bottom" constant="30" id="ziN-P9-87m"/>
                                             </constraints>
                                         </view>
@@ -220,6 +239,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="d6SelectionLbl" destination="PjS-BC-e1D" id="2fU-q6-NwV"/>
+                        <outlet property="d6StackView" destination="jUX-d4-0rt" id="REL-Ic-RFf"/>
+                        <outlet property="d6TypeImage" destination="qV6-ig-ABW" id="awy-S3-37K"/>
+                        <outlet property="diceSliderValueLbl" destination="nln-oM-bir" id="Gs7-iv-ls9"/>
+                        <outlet property="traditionalSelectedLbl" destination="js9-7u-8as" id="AA6-ah-vEr"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
                     </connections>
                 </viewController>
@@ -235,5 +259,7 @@
     </scenes>
     <resources>
         <image name="d6_img5" width="170" height="170"/>
+        <image name="diceValue01" width="40" height="40"/>
+        <image name="diceValue10" width="40" height="40"/>
     </resources>
 </document>

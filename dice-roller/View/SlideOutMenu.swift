@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SlideMenu: UIView {
+class SlideOutMenu: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C89821520103AD800D1668A /* SixSidedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89821420103AD800D1668A /* SixSidedLabel.swift */; };
+		3C89821F2010D8FC00D1668A /* PanGestureFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89821E2010D8FC00D1668A /* PanGestureFunc.swift */; };
+		3C8982212010D90E00D1668A /* RollRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8982202010D90E00D1668A /* RollRandomizer.swift */; };
+		3C8982232010D91C00D1668A /* DiceArrayFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8982222010D91C00D1668A /* DiceArrayFill.swift */; };
 		3CB62E6520094E2800D8D72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E6420094E2800D8D72A /* AppDelegate.swift */; };
 		3CB62E6A20094E2800D8D72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6820094E2800D8D72A /* Main.storyboard */; };
 		3CB62E6C20094E2800D8D72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6B20094E2800D8D72A /* Assets.xcassets */; };
@@ -14,8 +18,7 @@
 		3CB62E7A20094E2800D8D72A /* dice_rollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E7920094E2800D8D72A /* dice_rollerTests.swift */; };
 		3CB62E8520094E2800D8D72A /* dice_rollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */; };
 		3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */; };
-		3CB62E9A2009AF1800D8D72A /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E992009AF1800D8D72A /* PanGesture.swift */; };
-		3CB62E9C2009B7BB00D8D72A /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */; };
+		3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */; };
 		3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C89821420103AD800D1668A /* SixSidedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixSidedLabel.swift; sourceTree = "<group>"; };
+		3C89821E2010D8FC00D1668A /* PanGestureFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureFunc.swift; sourceTree = "<group>"; };
+		3C8982202010D90E00D1668A /* RollRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollRandomizer.swift; sourceTree = "<group>"; };
+		3C8982222010D91C00D1668A /* DiceArrayFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceArrayFill.swift; sourceTree = "<group>"; };
 		3CB62E6120094E2800D8D72A /* dice-roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dice-roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E6420094E2800D8D72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB62E6920094E2800D8D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,8 +57,7 @@
 		3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dice_rollerUITests.swift; sourceTree = "<group>"; };
 		3CB62E8620094E2800D8D72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerVC.swift; sourceTree = "<group>"; };
-		3CB62E992009AF1800D8D72A /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
-		3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenu.swift; sourceTree = "<group>"; };
 		3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,9 +142,9 @@
 		3CB62E9220094EAB00D8D72A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3CB62E992009AF1800D8D72A /* PanGesture.swift */,
-				3CB62E9B2009B7BB00D8D72A /* SlideMenu.swift */,
+				3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */,
 				3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */,
+				3C89821420103AD800D1668A /* SixSidedLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +152,9 @@
 		3CB62E9320094EBF00D8D72A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C89821E2010D8FC00D1668A /* PanGestureFunc.swift */,
+				3C8982202010D90E00D1668A /* RollRandomizer.swift */,
+				3C8982222010D91C00D1668A /* DiceArrayFill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,11 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB62E9C2009B7BB00D8D72A /* SlideMenu.swift in Sources */,
+				3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */,
+				3C8982232010D91C00D1668A /* DiceArrayFill.swift in Sources */,
+				3C89821F2010D8FC00D1668A /* PanGestureFunc.swift in Sources */,
 				3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */,
-				3CB62E9A2009AF1800D8D72A /* PanGesture.swift in Sources */,
 				3CB62E6520094E2800D8D72A /* AppDelegate.swift in Sources */,
+				3C8982212010D90E00D1668A /* RollRandomizer.swift in Sources */,
 				3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */,
+				3C89821520103AD800D1668A /* SixSidedLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
