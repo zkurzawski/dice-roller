@@ -17,5 +17,4 @@ class SixSidedLabel: UILabel {
     func deselected() {
         self.textColor = #colorLiteral(red: 0.6467786431, green: 0.7380540967, blue: 0.8325814605, alpha: 1)
     }
-    
 }

@@ -18,15 +18,14 @@ class DiceRollerVC: UIViewController {
     @IBOutlet weak var d6StackView: UIStackView!
   
     var diceQty = 1
-    var diceSize = 4
+    var diceSize = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
         d6SelectionLbl.selected()
         traditionalSelectedLbl.deselected()
-        d6StackView.isHidden = true
-        d6TypeImage.image = UIImage(named: "d4_img5.png")
-        diceSize = 4
+        d6StackView.isHidden = false
+        d6TypeImage.image = UIImage(named: "d6_img5.png")
     }
 
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
@@ -38,34 +37,9 @@ class DiceRollerVC: UIViewController {
     }
    
     @IBAction func diceSelectionSegCntrl(_ sender: UISegmentedControl) {
-        
-        if sender.selectedSegmentIndex == 1 {
-            d6StackView.isHidden = false
-        } else {
-            d6StackView.isHidden = true
-        }
-        
-        switch sender.selectedSegmentIndex {
-        case 0:
-            diceSize = 4
-        case 1:
-            diceSize = 6
-        case 2:
-            diceSize = 8
-        case 3:
-            diceSize = 10
-        case 4:
-            diceSize = 12
-        case 5:
-            diceSize = 20
-        case 6:
-            diceSize = 100
-        default:
-            diceSize = 4
-        }
-  
+        d6StackView.isHidden = sixSideStackViewVisible(selected: sender.selectedSegmentIndex)
+        diceSize = diceSizeSelect(selected: sender.selectedSegmentIndex)
         d6TypeImage.image = UIImage(named: "d\(diceSize)_img5")
-        
     }
     
     @IBAction func sixSidedTypeChose(_ sender: UISwitch) {

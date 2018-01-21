@@ -79,7 +79,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-4s-hC4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-4s-hC4" customClass="ButtonAppearance" customModule="dice_roller" customModuleProvider="target">
                                 <rect key="frame" x="50" y="653" width="314" height="53"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
@@ -96,7 +96,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh" customClass="DiceSelector" customModule="dice_roller" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh" customClass="DiceSelector" customModule="dice_roller" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="102" width="290" height="41"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -221,7 +221,6 @@
                             <constraint firstItem="nf6-yP-mRB" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="60" id="DQA-PK-WER"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="30" id="Fod-on-qMu"/>
                             <constraint firstAttribute="trailing" secondItem="s73-QZ-ps8" secondAttribute="trailing" id="KTA-kB-u7B"/>
-                            <constraint firstItem="nf6-yP-mRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mf2-ym-qG5"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJC-tq-YdJ"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tsq-iy-Y9L"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-YL-Z0t"/>
