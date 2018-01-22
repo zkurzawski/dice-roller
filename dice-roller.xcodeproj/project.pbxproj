@@ -12,6 +12,7 @@
 		3C8982232010D91C00D1668A /* DiceArrayFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8982222010D91C00D1668A /* DiceArrayFill.swift */; };
 		3C898225201436CD00D1668A /* ButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C898224201436CD00D1668A /* ButtonAppearance.swift */; };
 		3C8982292014454200D1668A /* DiceSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8982282014454200D1668A /* DiceSelection.swift */; };
+		3C89822D2015483F00D1668A /* PanGestureFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89822C2015483F00D1668A /* PanGestureFunctionality.swift */; };
 		3CB62E6520094E2800D8D72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E6420094E2800D8D72A /* AppDelegate.swift */; };
 		3CB62E6A20094E2800D8D72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6820094E2800D8D72A /* Main.storyboard */; };
 		3CB62E6C20094E2800D8D72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6B20094E2800D8D72A /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		3C8982222010D91C00D1668A /* DiceArrayFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceArrayFill.swift; sourceTree = "<group>"; };
 		3C898224201436CD00D1668A /* ButtonAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppearance.swift; sourceTree = "<group>"; };
 		3C8982282014454200D1668A /* DiceSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSelection.swift; sourceTree = "<group>"; };
+		3C89822C2015483F00D1668A /* PanGestureFunctionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureFunctionality.swift; sourceTree = "<group>"; };
 		3CB62E6120094E2800D8D72A /* dice-roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dice-roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E6420094E2800D8D72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB62E6920094E2800D8D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				3C8982202010D90E00D1668A /* RollRandomizer.swift */,
 				3C8982222010D91C00D1668A /* DiceArrayFill.swift */,
 				3C8982282014454200D1668A /* DiceSelection.swift */,
+				3C89822C2015483F00D1668A /* PanGestureFunctionality.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */,
+				3C89822D2015483F00D1668A /* PanGestureFunctionality.swift in Sources */,
 				3C8982232010D91C00D1668A /* DiceArrayFill.swift in Sources */,
 				3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */,
 				3C898225201436CD00D1668A /* ButtonAppearance.swift in Sources */,

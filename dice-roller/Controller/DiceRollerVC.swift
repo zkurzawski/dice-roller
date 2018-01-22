@@ -20,15 +20,19 @@ class DiceRollerVC: UIViewController {
     var diceQty = 1
     var diceSize = 6
     
+    var gestureTest = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         d6SelectionLbl.selected()
         traditionalSelectedLbl.deselected()
         d6StackView.isHidden = false
         d6TypeImage.image = UIImage(named: "d6_img5.png")
+        viewConstraint.constant = -320
     }
 
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
+        panActivated(viewConstraint: viewConstraint, panInfo: sender)
     }
    
     @IBAction func diceSliderChange(_ sender: UISlider) {
