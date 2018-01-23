@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-yP-mRB">
-                                <rect key="frame" x="20" y="123.33333333333334" width="374" height="509.66666666666663"/>
+                                <rect key="frame" x="10" y="153.33333333333334" width="394" height="479.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vjl-CY-g9m">
                                     <size key="itemSize" width="118" height="153"/>
@@ -88,6 +88,24 @@
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K04-WS-jfy">
+                                <rect key="frame" x="10" y="83.333333333333329" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yc3-oT-XWG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiC-oB-uk8">
+                                <rect key="frame" x="10" y="118.33333333333331" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0kf-RV-hKw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideMenu" customModule="dice_roller" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                                 <subviews>
@@ -216,26 +234,32 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yxd-tH-iYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1HO-14-93w"/>
+                            <constraint firstItem="jiC-oB-uk8" firstAttribute="top" secondItem="K04-WS-jfy" secondAttribute="bottom" constant="5" id="39a-bH-8VU"/>
+                            <constraint firstItem="nf6-yP-mRB" firstAttribute="top" secondItem="jiC-oB-uk8" secondAttribute="bottom" constant="5" id="5i9-wt-oYu"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6fJ-1Y-9L1"/>
                             <constraint firstAttribute="bottom" secondItem="bmm-pF-ogb" secondAttribute="bottom" id="CWx-tZ-oPQ"/>
                             <constraint firstItem="Yxd-tH-iYJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cyu-YO-xtk"/>
-                            <constraint firstItem="nf6-yP-mRB" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="60" id="DQA-PK-WER"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="30" id="Fod-on-qMu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K04-WS-jfy" secondAttribute="trailing" constant="10" id="J7Z-fY-dtZ"/>
                             <constraint firstAttribute="trailing" secondItem="s73-QZ-ps8" secondAttribute="trailing" id="KTA-kB-u7B"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJC-tq-YdJ"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tsq-iy-Y9L"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-YL-Z0t"/>
+                            <constraint firstItem="jiC-oB-uk8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ug5-Nj-S3n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="VHC-A2-wTg">
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="esE-4s-hC4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Vuv-eI-BFc">
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
-                            <constraint firstItem="nf6-yP-mRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="X0B-Lb-YCJ"/>
+                            <constraint firstItem="nf6-yP-mRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="X0B-Lb-YCJ"/>
                             <constraint firstItem="esE-4s-hC4" firstAttribute="top" secondItem="nf6-yP-mRB" secondAttribute="bottom" constant="20" id="cfz-oQ-xTW"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
                             <constraint firstItem="esE-4s-hC4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l0I-kX-zsc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nf6-yP-mRB" secondAttribute="trailing" constant="20" id="mOH-WL-1WM"/>
+                            <constraint firstItem="K04-WS-jfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="m5U-cC-EEx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nf6-yP-mRB" secondAttribute="trailing" constant="10" id="mOH-WL-1WM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiC-oB-uk8" secondAttribute="trailing" constant="10" id="mTa-Wg-9W4"/>
+                            <constraint firstItem="K04-WS-jfy" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="20" id="rDr-7K-MWn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -246,6 +270,8 @@
                         <outlet property="d6SelectionLbl" destination="PjS-BC-e1D" id="2fU-q6-NwV"/>
                         <outlet property="d6StackView" destination="jUX-d4-0rt" id="REL-Ic-RFf"/>
                         <outlet property="d6TypeImage" destination="qV6-ig-ABW" id="awy-S3-37K"/>
+                        <outlet property="diceQtyLbl" destination="jiC-oB-uk8" id="HCt-02-uZo"/>
+                        <outlet property="diceSizeLbl" destination="K04-WS-jfy" id="lf9-ek-Cia"/>
                         <outlet property="diceSliderValueLbl" destination="nln-oM-bir" id="Gs7-iv-ls9"/>
                         <outlet property="traditionalSelectedLbl" destination="js9-7u-8as" id="AA6-ah-vEr"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
