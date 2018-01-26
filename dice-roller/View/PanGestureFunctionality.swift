@@ -16,7 +16,7 @@ func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureReco
         if translation > 0 {
             if viewConstraint.constant < 10 {
                 UIView.animate(withDuration: 0.5, animations: {
-                    viewConstraint.constant += translation / 30
+                    viewConstraint.constant += translation / 20
                     panInfo.view?.layoutIfNeeded()
 
                 })
@@ -24,7 +24,7 @@ func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureReco
         } else {
             if viewConstraint.constant > -320 {
                 UIView.animate(withDuration: 0.5, animations: {
-                    viewConstraint.constant += translation / 30})
+                    viewConstraint.constant += translation / 20})
                     panInfo.view?.layoutIfNeeded()
             }
         }

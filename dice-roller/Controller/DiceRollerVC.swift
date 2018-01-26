@@ -8,31 +8,53 @@
 
 import UIKit
 
-class DiceRollerVC: UIViewController {
+class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
+   
     @IBOutlet weak var diceSliderValueLbl: UILabel!
     @IBOutlet weak var d6SelectionLbl: SixSidedLabel!
     @IBOutlet weak var traditionalSelectedLbl: SixSidedLabel!
     @IBOutlet weak var d6TypeImage: UIImageView!
     @IBOutlet weak var d6StackView: UIStackView!
+    
     @IBOutlet weak var diceSizeLbl: UILabel!
     @IBOutlet weak var diceQtyLbl: UILabel!
+    
+    @IBOutlet weak var diceCollectionView: UICollectionView!
     
     var diceQty = 1
     var diceSize = 6
     
-    var gestureTest = 0
+    private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
+        diceCollectionView.delegate = self
+        diceCollectionView.dataSource = self
+        
         super.viewDidLoad()
         d6SelectionLbl.selected()
         traditionalSelectedLbl.deselected()
         d6StackView.isHidden = false
         d6TypeImage.image = UIImage(named: "d6_img5.png")
+        
         viewConstraint.constant = -320
+       
         diceSizeLbl.text = "Dice Size: d\(diceSize)"
         diceQtyLbl.text = "Number of Dice: \(diceQty)"
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dice.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "diceCell", for: indexPath) as? DiceCell {
+            let dice = self.dice[indexPath.row]
+            cell.updateViews(dice: dice)
+            return cell
+        }
+        return DiceCell()
     }
 
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
@@ -62,5 +84,10 @@ class DiceRollerVC: UIViewController {
         }
     }
     
+    @IBAction func rollBtn(_ sender: UIButton) {
+        dice = DiceArrayFill.instance.arrayFill(diceSize: diceSize, diceQty: diceQty)
+        diceCollectionView.reloadData()
+//        print(dice)
+    }
     
 }

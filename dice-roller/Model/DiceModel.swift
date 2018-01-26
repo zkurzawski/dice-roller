@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import UIKit
 
 struct Dice {
     private(set) public var imageName: String
@@ -16,4 +17,5 @@ struct Dice {
         self.imageName = imageName
         self.value = value
     }
+    
 }
