@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s73-QZ-ps8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodBlur" translatesAutoresizingMaskIntoConstraints="NO" id="s73-QZ-ps8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -67,30 +67,30 @@
                                 <rect key="frame" x="0.0" y="158.33333333333334" width="414" height="484.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PVm-nA-NCW">
-                                    <size key="itemSize" width="120" height="150"/>
+                                    <size key="itemSize" width="100" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="diceCell" id="Vml-aJ-Aas" customClass="DiceCell" customModule="dice_roller" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="120" height="150"/>
+                                        <rect key="frame" x="10" y="10" width="100" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="qJX-o7-Sw5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="EKh-o8-mac"/>
-                                                        <constraint firstAttribute="width" constant="120" id="zT9-9S-iaC"/>
+                                                        <constraint firstAttribute="height" constant="100" id="EKh-o8-mac"/>
+                                                        <constraint firstAttribute="width" constant="100" id="zT9-9S-iaC"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qE-Pg-lLC">
-                                                    <rect key="frame" x="0.0" y="120" width="120" height="30"/>
+                                                    <rect key="frame" x="0.0" y="100" width="100" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="cTJ-K5-kAg"/>
+                                                        <constraint firstAttribute="width" constant="100" id="cTJ-K5-kAg"/>
                                                         <constraint firstAttribute="height" constant="30" id="cnl-vB-ra5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Bv-45f" customClass="BlurMenu" customModule="dice_roller" customModuleProvider="target">
-                                        <rect key="frame" x="37" y="80" width="320" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ACi-EE-Bzp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,9 +182,6 @@
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Dice In Play: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-oM-bir">
                                                     <rect key="frame" x="23" y="378" width="274" height="30.333333333333314"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="274" id="Ti4-xp-39L"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -209,6 +206,7 @@
                                                 <constraint firstItem="qV6-ig-ABW" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="61H-e5-6kB"/>
                                                 <constraint firstItem="jUX-d4-0rt" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="8OH-hx-R6S"/>
                                                 <constraint firstItem="nln-oM-bir" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="ETo-nN-E28"/>
+                                                <constraint firstItem="nln-oM-bir" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="23" id="OE4-6r-jAq"/>
                                                 <constraint firstItem="qV6-ig-ABW" firstAttribute="top" secondItem="5Tk-SI-UJh" secondAttribute="bottom" constant="20" id="QVX-NQ-deh"/>
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="UUz-z0-HqW"/>
                                                 <constraint firstItem="5Tk-SI-UJh" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="15" id="Wxn-nJ-ADA"/>
@@ -218,6 +216,7 @@
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="bWE-GB-oPA"/>
                                                 <constraint firstAttribute="trailing" secondItem="JZ3-7Z-aAP" secondAttribute="trailing" constant="10" id="ef8-FN-x4O"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="50" id="g2T-LH-u6c"/>
+                                                <constraint firstAttribute="trailing" secondItem="nln-oM-bir" secondAttribute="trailing" constant="23" id="hEW-mH-wjV"/>
                                                 <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="30" id="tix-VS-4xE"/>
                                                 <constraint firstItem="JZ3-7Z-aAP" firstAttribute="top" secondItem="nln-oM-bir" secondAttribute="bottom" constant="30" id="uLn-1H-NYu"/>
                                                 <constraint firstItem="5Tk-SI-UJh" firstAttribute="top" secondItem="gFX-vg-nEq" secondAttribute="bottom" constant="30" id="ziN-P9-87m"/>
@@ -262,7 +261,6 @@
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="jiC-oB-uk8" secondAttribute="bottom" constant="10" id="fro-Qf-eP7"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" id="kp5-lD-XZI"/>
-                            <constraint firstItem="esE-4s-hC4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l0I-kX-zsc"/>
                             <constraint firstItem="K04-WS-jfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="m5U-cC-EEx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiC-oB-uk8" secondAttribute="trailing" constant="10" id="mTa-Wg-9W4"/>
                             <constraint firstItem="K04-WS-jfy" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="20" id="rDr-7K-MWn"/>
@@ -275,11 +273,11 @@
                     <connections>
                         <outlet property="d6SelectionLbl" destination="PjS-BC-e1D" id="2fU-q6-NwV"/>
                         <outlet property="d6StackView" destination="jUX-d4-0rt" id="REL-Ic-RFf"/>
-                        <outlet property="d6TypeImage" destination="qV6-ig-ABW" id="awy-S3-37K"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
                         <outlet property="diceQtyLbl" destination="jiC-oB-uk8" id="HCt-02-uZo"/>
                         <outlet property="diceSizeLbl" destination="K04-WS-jfy" id="lf9-ek-Cia"/>
                         <outlet property="diceSliderValueLbl" destination="nln-oM-bir" id="Gs7-iv-ls9"/>
+                        <outlet property="diceTypeImage" destination="qV6-ig-ABW" id="jlD-M9-D5k"/>
                         <outlet property="traditionalSelectedLbl" destination="js9-7u-8as" id="AA6-ah-vEr"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
                     </connections>
@@ -298,5 +296,6 @@
         <image name="d6_img5" width="170" height="170"/>
         <image name="diceValue01" width="40" height="40"/>
         <image name="diceValue10" width="40" height="40"/>
+        <image name="woodBlur" width="3456" height="5184"/>
     </resources>
 </document>

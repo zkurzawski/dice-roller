@@ -12,7 +12,7 @@ class DiceArrayFill {
     
     static let instance = DiceArrayFill()
     
-    func arrayFill(diceSize: Int, diceQty: Int) -> [Dice] {
+    func arrayFill(diceSize: Int, diceQty: Int, d6Choice: Bool) -> [Dice] {
         
         var results: [Dice] = []
         var randValue: Int
@@ -20,7 +20,11 @@ class DiceArrayFill {
         
         repeat{
             randValue = Int(arc4random_uniform(UInt32(diceSize)) + 1)
-            results.append(Dice(imageName: "d\(diceSize)_img\(randValue)", value: "\(randValue)"))
+            if d6Choice == true{
+                results.append(Dice(imageName: "trad_img\(randValue)", value: "\(randValue)"))
+            } else{
+                results.append(Dice(imageName: "d\(diceSize)_img\(randValue)", value: "\(randValue)"))
+            }
             index += 1
         } while (index < diceQty)
         

@@ -13,22 +13,25 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
     @IBOutlet weak var diceSliderValueLbl: UILabel!
-    @IBOutlet weak var d6SelectionLbl: SixSidedLabel!
-    @IBOutlet weak var traditionalSelectedLbl: SixSidedLabel!
-    @IBOutlet weak var d6TypeImage: UIImageView!
-    @IBOutlet weak var d6StackView: UIStackView!
-    
     @IBOutlet weak var diceSizeLbl: UILabel!
     @IBOutlet weak var diceQtyLbl: UILabel!
+    
+    @IBOutlet weak var d6SelectionLbl: SixSidedLabel!
+    @IBOutlet weak var traditionalSelectedLbl: SixSidedLabel!
+    
+    @IBOutlet weak var diceTypeImage: UIImageView!
+    @IBOutlet weak var d6StackView: UIStackView!
     
     @IBOutlet weak var diceCollectionView: UICollectionView!
     
     var diceQty = 1
     var diceSize = 6
+    var d6Choice = false
     
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
+        
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
         
@@ -36,12 +39,16 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         d6SelectionLbl.selected()
         traditionalSelectedLbl.deselected()
         d6StackView.isHidden = false
-        d6TypeImage.image = UIImage(named: "d6_img5.png")
+        diceTypeImage.image = UIImage(named: "d6_img5.png")
         
         viewConstraint.constant = -320
        
         diceSizeLbl.text = "Dice Size: d\(diceSize)"
         diceQtyLbl.text = "Number of Dice: \(diceQty)"
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,31 +70,22 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
    
     @IBAction func diceSliderChange(_ sender: UISlider) {
         diceQty = Int(sender.value)
-        diceSliderValueLbl.text = "Number of Dice in Play: \(diceQty)"
-        diceQtyLbl.text = "Number of Dice: \(diceQty)"
+        OptionsResults.instance.sliderResults(diceTypeLbl: diceSliderValueLbl, diceQtyLbl: diceQtyLbl, diceQty: diceQty)
     }
    
     @IBAction func diceSelectionSegCntrl(_ sender: UISegmentedControl) {
-        d6StackView.isHidden = sixSideStackViewVisible(selected: sender.selectedSegmentIndex)
         diceSize = diceSizeSelect(selected: sender.selectedSegmentIndex)
-        d6TypeImage.image = UIImage(named: "d\(diceSize)_img5")
-        diceSizeLbl.text = "Dice Size: d\(diceSize)"
+        OptionsResults.instance.segmentedCntrlResults(d6Stack: d6StackView, diceTypeImg: diceTypeImage, diceSizeLbl: diceSizeLbl, diceSize: diceSize, segmentedChoice: sender)
     }
     
     @IBAction func sixSidedTypeChose(_ sender: UISwitch) {
-        if (sender.isOn == false) {
-            traditionalSelectedLbl.deselected()
-            d6SelectionLbl.selected()
-        } else {
-            traditionalSelectedLbl.selected()
-            d6SelectionLbl.deselected()
-        }
+        d6Choice = sender.isOn
+        OptionsResults.instance.sixSidedTypeChoose(d6TypeLbl: d6SelectionLbl, tradTypeLbl: traditionalSelectedLbl, d6TradImage: diceTypeImage, switchResult: sender)
     }
     
     @IBAction func rollBtn(_ sender: UIButton) {
-        dice = DiceArrayFill.instance.arrayFill(diceSize: diceSize, diceQty: diceQty)
+        dice = DiceArrayFill.instance.arrayFill(diceSize: diceSize, diceQty: diceQty, d6Choice: d6Choice)
         diceCollectionView.reloadData()
-//        print(dice)
     }
     
 }
