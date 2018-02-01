@@ -18,6 +18,7 @@ class DiceArrayFill {
         var randValue: Int
         var index = 0
         
+//        add in a second repeat while loop for each type of dice
         repeat{
             randValue = Int(arc4random_uniform(UInt32(diceSize)) + 1)
             if d6Choice == true{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
@@ -27,7 +27,7 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var diceQty = 1
     var diceSize = 6
     var d6Choice = false
-    
+  
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         d6StackView.isHidden = false
         diceTypeImage.image = UIImage(named: "d6_img5.png")
         
-        viewConstraint.constant = -320
+        viewConstraint.constant = -340
        
         diceSizeLbl.text = "Dice Size: d\(diceSize)"
         diceQtyLbl.text = "Number of Dice: \(diceQty)"
@@ -63,7 +63,13 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         }
         return DiceCell()
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = ((self.view.frame.size.width - 20) / 4)
+        let height = (width * 1.5)
+        return CGSize(width: width, height: height)
+    }
+    
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
         panActivated(viewConstraint: viewConstraint, panInfo: sender)
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,21 +21,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DiceRollerVC" customModule="dice_roller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodBlur" translatesAutoresizingMaskIntoConstraints="NO" id="s73-QZ-ps8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right for options  &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-tH-iYJ">
-                                <rect key="frame" x="107.99999999999999" y="40" width="197.66666666666663" height="23.333333333333329"/>
+                                <rect key="frame" x="89" y="40" width="197.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-4s-hC4" customClass="ButtonAppearance" customModule="dice_roller" customModuleProvider="target">
-                                <rect key="frame" x="50" y="653" width="314" height="53"/>
+                                <rect key="frame" x="50" y="584" width="275" height="53"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <state key="normal" title="ROLL">
@@ -46,64 +46,59 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K04-WS-jfy">
-                                <rect key="frame" x="10" y="83.333333333333329" width="394" height="30"/>
+                                <rect key="frame" x="10" y="83.5" width="355" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yc3-oT-XWG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiC-oB-uk8">
-                                <rect key="frame" x="10" y="118.33333333333331" width="394" height="30"/>
+                                <rect key="frame" x="10" y="118.5" width="355" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0kf-RV-hKw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
-                                <rect key="frame" x="0.0" y="158.33333333333334" width="414" height="484.66666666666663"/>
+                                <rect key="frame" x="10" y="158.5" width="355" height="415.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PVm-nA-NCW">
-                                    <size key="itemSize" width="100" height="130"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="10" id="PVm-nA-NCW">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="diceCell" id="Vml-aJ-Aas" customClass="DiceCell" customModule="dice_roller" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="100" height="130"/>
+                                        <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="qJX-o7-Sw5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="EKh-o8-mac"/>
-                                                        <constraint firstAttribute="width" constant="100" id="zT9-9S-iaC"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="qJX-o7-Sw5"/>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qE-Pg-lLC">
-                                                    <rect key="frame" x="0.0" y="100" width="100" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="cTJ-K5-kAg"/>
-                                                        <constraint firstAttribute="height" constant="30" id="cnl-vB-ra5"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="-8.5" y="0.0" width="17" height="0.0"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="qJX-o7-Sw5" firstAttribute="centerX" secondItem="Vml-aJ-Aas" secondAttribute="centerX" id="ABI-j6-hP0"/>
-                                            <constraint firstAttribute="bottom" secondItem="4qE-Pg-lLC" secondAttribute="bottom" id="GkX-OA-w6e"/>
-                                            <constraint firstItem="4qE-Pg-lLC" firstAttribute="centerX" secondItem="Vml-aJ-Aas" secondAttribute="centerX" id="MrA-l1-NzZ"/>
-                                            <constraint firstItem="qJX-o7-Sw5" firstAttribute="top" secondItem="Vml-aJ-Aas" secondAttribute="top" id="Wde-8T-A6L"/>
+                                            <constraint firstAttribute="trailing" secondItem="qJX-o7-Sw5" secondAttribute="trailing" id="2ge-Tf-hzp"/>
+                                            <constraint firstAttribute="bottom" secondItem="4qE-Pg-lLC" secondAttribute="bottom" id="HNh-vl-ir7"/>
+                                            <constraint firstItem="qJX-o7-Sw5" firstAttribute="leading" secondItem="Vml-aJ-Aas" secondAttribute="leading" id="WrO-ZI-f1T"/>
+                                            <constraint firstItem="qJX-o7-Sw5" firstAttribute="top" secondItem="Vml-aJ-Aas" secondAttribute="top" id="cNo-Nc-74C"/>
+                                            <constraint firstItem="4qE-Pg-lLC" firstAttribute="top" secondItem="qJX-o7-Sw5" secondAttribute="bottom" id="g82-LY-8gI"/>
+                                            <constraint firstItem="4qE-Pg-lLC" firstAttribute="centerX" secondItem="Vml-aJ-Aas" secondAttribute="centerX" id="y4f-8B-J6u"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="diceImageCell" destination="qJX-o7-Sw5" id="ssz-PI-yTO"/>
@@ -112,16 +107,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideMenu" customModule="dice_roller" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideOutMenu" customModule="dice_roller" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                 <subviews>
-                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Bv-45f" customClass="BlurMenu" customModule="dice_roller" customModuleProvider="target">
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Bv-45f" customClass="BlurMenu" customModule="dice_roller" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ACi-EE-Bzp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh" customClass="DiceSelector" customModule="dice_roller" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Tk-SI-UJh">
                                                     <rect key="frame" x="15" y="102" width="290" height="41"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -142,7 +137,7 @@
                                                     </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-vg-nEq">
-                                                    <rect key="frame" x="110.66666666666669" y="50" width="99.333333333333314" height="22"/>
+                                                    <rect key="frame" x="110.5" y="50" width="99.5" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="DJR-ev-iDS"/>
                                                     </constraints>
@@ -151,23 +146,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jUX-d4-0rt">
-                                                    <rect key="frame" x="28.333333333333343" y="317" width="264.66666666666663" height="31"/>
+                                                    <rect key="frame" x="28.5" y="317" width="264.5" height="31"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjS-BC-e1D" customClass="SixSidedLabel" customModule="dice_roller" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="27.666666666666668" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="27.5" height="31"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                             <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-9b-dsA">
-                                                            <rect key="frame" x="67.666666666666671" y="0.0" width="51" height="31"/>
+                                                            <rect key="frame" x="67.5" y="0.0" width="51" height="31"/>
                                                             <color key="onTintColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <connections>
                                                                 <action selector="sixSidedTypeChose:" destination="BYZ-38-t0r" eventType="valueChanged" id="YHX-QK-W3R"/>
                                                             </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traditional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js9-7u-8as" customClass="SixSidedLabel" customModule="dice_roller" customModuleProvider="target">
-                                                            <rect key="frame" x="156.66666666666666" y="0.0" width="107.99999999999997" height="31"/>
+                                                            <rect key="frame" x="156.5" y="0.0" width="108" height="31"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                             <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -175,13 +170,13 @@
                                                     </subviews>
                                                 </stackView>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" minimumValueImage="diceValue01" maximumValueImage="diceValue10" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-7Z-aAP">
-                                                    <rect key="frame" x="8" y="438.33333333333331" width="304" height="40"/>
+                                                    <rect key="frame" x="8" y="438.5" width="304" height="40"/>
                                                     <connections>
                                                         <action selector="diceSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zdb-j7-BfB"/>
                                                     </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Dice In Play: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-oM-bir">
-                                                    <rect key="frame" x="23" y="378" width="274" height="30.333333333333314"/>
+                                                    <rect key="frame" x="23" y="378" width="274" height="30.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" red="1" green="0.99997591972351074" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -194,7 +189,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;  swipe left to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-XO-GLS">
-                                                    <rect key="frame" x="79.666666666666686" y="682.66666666666663" width="161" height="23.333333333333371"/>
+                                                    <rect key="frame" x="80" y="613.5" width="161" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -247,7 +242,7 @@
                             <constraint firstItem="esE-4s-hC4" firstAttribute="top" secondItem="yoE-cG-RVR" secondAttribute="bottom" constant="10" id="Goc-lr-pKh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K04-WS-jfy" secondAttribute="trailing" constant="10" id="J7Z-fY-dtZ"/>
                             <constraint firstAttribute="trailing" secondItem="s73-QZ-ps8" secondAttribute="trailing" id="KTA-kB-u7B"/>
-                            <constraint firstItem="yoE-cG-RVR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kac-ze-Ex4"/>
+                            <constraint firstItem="yoE-cG-RVR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kac-ze-Ex4"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJC-tq-YdJ"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tsq-iy-Y9L"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-YL-Z0t"/>
@@ -260,7 +255,7 @@
                             </constraint>
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="jiC-oB-uk8" secondAttribute="bottom" constant="10" id="fro-Qf-eP7"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" id="kp5-lD-XZI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="10" id="kp5-lD-XZI"/>
                             <constraint firstItem="K04-WS-jfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="m5U-cC-EEx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiC-oB-uk8" secondAttribute="trailing" constant="10" id="mTa-Wg-9W4"/>
                             <constraint firstItem="K04-WS-jfy" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="20" id="rDr-7K-MWn"/>
@@ -293,7 +288,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="d6_img5" width="170" height="170"/>
+        <image name="d6_img5" width="300" height="300"/>
         <image name="diceValue01" width="40" height="40"/>
         <image name="diceValue10" width="40" height="40"/>
         <image name="woodBlur" width="3456" height="5184"/>
