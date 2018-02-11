@@ -65,9 +65,9 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = ((self.view.frame.size.width - 20) / 4)
+        let width = ((self.view.frame.size.width - 20) / 5)
         let height = (width * 1.5)
-        return CGSize(width: width, height: height)
+        return CGSize(width: ((self.view.frame.size.width - 20) / 5), height: height)
     }
     
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {

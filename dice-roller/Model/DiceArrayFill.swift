@@ -21,7 +21,7 @@ class DiceArrayFill {
 //        add in a second repeat while loop for each type of dice
         repeat{
             randValue = Int(arc4random_uniform(UInt32(diceSize)) + 1)
-            if d6Choice == true{
+            if (diceSize == 6 && d6Choice == true){
                 results.append(Dice(imageName: "trad_img\(randValue)", value: "\(randValue)"))
             } else{
                 results.append(Dice(imageName: "d\(diceSize)_img\(randValue)", value: "\(randValue)"))
