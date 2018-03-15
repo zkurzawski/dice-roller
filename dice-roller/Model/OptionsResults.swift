@@ -12,7 +12,11 @@ import UIKit
 class OptionsResults{
     static let instance = OptionsResults()
     
-    func sliderResults(diceTypeLbl: UILabel, diceQtyLbl: UILabel, diceQty: Int) {
+    func sliderResults(diceTypeLbl: UILabel, diceQtyLbl: UILabel, diceQty: Int, upperDiceTypeLbl: [UILabel], diceSize: Int) {
+//        let diceTypeQty = upperDiceTypeLbl[2]
+//        diceTypeQty.text = "\(diceQty)"
+        print("dice size in slider func \(diceSize)")
+        upperDiceTypeLbl[diceSize].text = "\(diceQty)"
         diceTypeLbl.text = "Number of Dice in Play: \(diceQty)"
         diceQtyLbl.text = "Number of Dice: \(diceQty)"
     }
@@ -20,6 +24,8 @@ class OptionsResults{
     func segmentedCntrlResults(d6Stack: UIStackView, diceTypeImg: UIImageView, diceSizeLbl: UILabel, diceSize: Int, segmentedChoice: UISegmentedControl) {
         d6Stack.isHidden = sixSideStackViewVisible(selected: segmentedChoice.selectedSegmentIndex)
         diceTypeImg.image = UIImage(named: "d\(diceSize)_img5")
+        print("dice index chose \(segmentedChoice.selectedSegmentIndex)")
+        print("dice size in segmented func \(diceSize)")
         if diceSize == 100 {
             diceSizeLbl.text = "Dice Size: d%"
         } else {

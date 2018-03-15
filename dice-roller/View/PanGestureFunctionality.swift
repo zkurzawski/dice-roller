@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureRecognizer) {
-    print ("\(panInfo.translation(in: panInfo.view).x)")
     if (panInfo.state == .began || panInfo.state == .changed){
         let translation = panInfo.translation(in: panInfo.view).x
         if translation > 0 {

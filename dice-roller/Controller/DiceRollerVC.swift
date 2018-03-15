@@ -15,6 +15,14 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var diceSliderValueLbl: UILabel!
     @IBOutlet weak var diceSizeLbl: UILabel!
     @IBOutlet weak var diceQtyLbl: UILabel!
+    @IBOutlet weak var diceChoiceLbl00: UILabel!
+    @IBOutlet weak var diceChoiceLbl01: UILabel!
+    @IBOutlet weak var diceChoiceLbl02: UILabel!
+    @IBOutlet weak var diceChoiceLbl03: UILabel!
+    @IBOutlet weak var diceChoiceLbl04:UILabel!
+    @IBOutlet weak var diceChoiceLbl05:UILabel!
+    @IBOutlet weak var diceChoiceLbl06:UILabel!
+    
     
     @IBOutlet weak var d6SelectionLbl: SixSidedLabel!
     @IBOutlet weak var traditionalSelectedLbl: SixSidedLabel!
@@ -24,16 +32,30 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var diceCollectionView: UICollectionView!
     
+//    stepper test
+    
+    @IBOutlet weak var diceQtyStepper: UIStepper!
+    @IBOutlet weak var stepperLbl: UILabel!
+    var stepperQty = 0
+//
+    
     var diceQty = 1
     var diceSize = 6
     var d6Choice = false
-  
+    
+    var diceTypeQty = [Int]()
+    var diceTypeQtyLbls = [UILabel]()
+    
+    var segmentedSelectionResult = 0
+    
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
         
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
+    
+        diceTypeQtyLbls = [diceChoiceLbl00, diceChoiceLbl01, diceChoiceLbl02, diceChoiceLbl03, diceChoiceLbl04, diceChoiceLbl05, diceChoiceLbl06]
         
         super.viewDidLoad()
         d6SelectionLbl.selected()
@@ -76,11 +98,13 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
    
     @IBAction func diceSliderChange(_ sender: UISlider) {
         diceQty = Int(sender.value)
-        OptionsResults.instance.sliderResults(diceTypeLbl: diceSliderValueLbl, diceQtyLbl: diceQtyLbl, diceQty: diceQty)
+        OptionsResults.instance.sliderResults(diceTypeLbl: diceSliderValueLbl, diceQtyLbl: diceQtyLbl, diceQty: diceQty, upperDiceTypeLbl: diceTypeQtyLbls, diceSize: segmentedSelectionResult)
     }
    
     @IBAction func diceSelectionSegCntrl(_ sender: UISegmentedControl) {
         diceSize = diceSizeSelect(selected: sender.selectedSegmentIndex)
+        segmentedSelectionResult = sender.selectedSegmentIndex
+        print("dice size selected: \(segmentedSelectionResult)")
         OptionsResults.instance.segmentedCntrlResults(d6Stack: d6StackView, diceTypeImg: diceTypeImage, diceSizeLbl: diceSizeLbl, diceSize: diceSize, segmentedChoice: sender)
     }
     
@@ -93,5 +117,13 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         dice = DiceArrayFill.instance.arrayFill(diceSize: diceSize, diceQty: diceQty, d6Choice: d6Choice)
         diceCollectionView.reloadData()
     }
+    
+//    stepper test actions
+    @IBAction func qtyStep(_ sender: UIStepper) {
+        stepperQty = Int(sender.value)
+//        stepperLbl.text = "\(Int(sender.value))"
+        stepperLbl.text = "\(stepperQty)"
+    }
+//
     
 }
