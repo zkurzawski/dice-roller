@@ -64,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
-                                <rect key="frame" x="10" y="158.5" width="355" height="415.5"/>
+                                <rect key="frame" x="10" y="103.5" width="355" height="470.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="10" id="PVm-nA-NCW">
                                     <size key="itemSize" width="0.0" height="0.0"/>
@@ -136,6 +136,9 @@
                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="onTintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="thumbTintColor" red="0.80003798010000005" green="0.80000758169999997" blue="0.80002808569999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="d6AppearanceSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVg-6L-daP"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D6 Appearance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-52-FAA">
                                                     <rect key="frame" x="73" y="362" width="174" height="33"/>
@@ -182,6 +185,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="h0j-tV-dTl">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d4Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="qyM-lD-ZKX"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -221,6 +227,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="bhV-nR-aZu">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d6Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="vAe-H3-ste"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -260,6 +269,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TjK-CF-dPg">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d8Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="YES-xE-Hqs"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -299,6 +311,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-dd-CFu">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d10Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="wxZ-gT-n2Q"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -338,6 +353,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2H6-Ju-N9Q">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d12Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="kRf-RA-guT"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -377,6 +395,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="anj-aW-6Wd">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d20Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="XkS-o9-F3q"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -416,6 +437,9 @@
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="A60-px-NUb">
                                                                     <rect key="frame" x="179" y="0.0" width="94" height="29"/>
                                                                     <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="d100Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="pyl-uF-J6o"/>
+                                                                    </connections>
                                                                 </stepper>
                                                             </subviews>
                                                         </stackView>
@@ -435,15 +459,18 @@
                                                     <state key="normal" title="RESET ALL">
                                                         <color key="titleColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="menuReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRN-oC-h8C"/>
+                                                    </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-z0-JYX">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5_dim" highlightedImage="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-z0-JYX" customClass="SelectedSixSidedImage" customModule="dice_roller" customModuleProvider="target">
                                                     <rect key="frame" x="201" y="397" width="46" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="46" id="KRd-c1-Hek"/>
                                                         <constraint firstAttribute="width" constant="46" id="pyh-fh-42A"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-OR-7oq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5_dim" highlightedImage="d6_img5" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-OR-7oq" customClass="SelectedSixSidedImage" customModule="dice_roller" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="397" width="46" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="cTl-Hs-PQW"/>
@@ -508,6 +535,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="jiC-oB-uk8" secondAttribute="bottom" constant="10" id="fro-Qf-eP7"/>
+                            <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="40" id="fyy-kJ-ef9"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="10" id="kp5-lD-XZI"/>
                             <constraint firstItem="K04-WS-jfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="m5U-cC-EEx"/>
@@ -515,20 +543,36 @@
                             <constraint firstItem="K04-WS-jfy" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="20" id="rDr-7K-MWn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K04-WS-jfy"/>
+                                <exclude reference="jiC-oB-uk8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="fro-Qf-eP7"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gO8-BG-oko" appends="YES" id="MNM-6e-kbr"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="d100QtyLbl" destination="TrP-3I-qH6" id="1Eh-cY-FAA"/>
+                        <outlet property="d100Stepper" destination="A60-px-NUb" id="nXL-bs-ZEX"/>
                         <outlet property="d10QtyLbl" destination="Rrc-lh-rpl" id="1JY-8c-YpZ"/>
+                        <outlet property="d10Stepper" destination="8HQ-dd-CFu" id="KWg-2I-Bzf"/>
                         <outlet property="d12QtyLbl" destination="cbs-Rd-LdG" id="rjC-63-slG"/>
+                        <outlet property="d12Stepper" destination="2H6-Ju-N9Q" id="JaG-aX-VMY"/>
                         <outlet property="d20QtyLbl" destination="gCp-l0-YYY" id="VIO-bQ-EOZ"/>
+                        <outlet property="d20Stepper" destination="anj-aW-6Wd" id="YPs-t9-sI9"/>
                         <outlet property="d4QtyLbl" destination="TO3-8n-Utk" id="Ukb-yk-kYF"/>
+                        <outlet property="d4Stepper" destination="h0j-tV-dTl" id="7Tc-lS-96J"/>
                         <outlet property="d6DDImg" destination="CfR-OR-7oq" id="7QV-ig-JTa"/>
                         <outlet property="d6QtyLbl" destination="gmB-y5-HO0" id="bfe-bq-z1X"/>
+                        <outlet property="d6Stepper" destination="bhV-nR-aZu" id="RaD-ep-twx"/>
                         <outlet property="d6TradImg" destination="hTr-z0-JYX" id="Zem-jq-kpg"/>
                         <outlet property="d8QtyLbl" destination="zB2-hO-wBt" id="Oa8-3j-CFQ"/>
+                        <outlet property="d8Stepper" destination="TjK-CF-dPg" id="Jdz-6Q-FCr"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
                         <outlet property="diceQtyLbl" destination="jiC-oB-uk8" id="HCt-02-uZo"/>
                         <outlet property="diceSizeLbl" destination="K04-WS-jfy" id="lf9-ek-Cia"/>
@@ -547,6 +591,7 @@
     </scenes>
     <resources>
         <image name="d6_img5" width="300" height="300"/>
+        <image name="d6_img5_dim" width="170" height="170"/>
         <image name="woodBlur" width="3456" height="5184"/>
     </resources>
 </document>

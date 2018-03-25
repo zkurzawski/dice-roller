@@ -12,6 +12,14 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
 
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
+    @IBOutlet weak var d4Stepper: UIStepper!
+    @IBOutlet weak var d6Stepper: UIStepper!
+    @IBOutlet weak var d8Stepper: UIStepper!
+    @IBOutlet weak var d10Stepper: UIStepper!
+    @IBOutlet weak var d12Stepper: UIStepper!
+    @IBOutlet weak var d20Stepper: UIStepper!
+    @IBOutlet weak var d100Stepper: UIStepper!
+    
     @IBOutlet weak var d4QtyLbl: UILabel!
     @IBOutlet weak var d6QtyLbl: UILabel!
     @IBOutlet weak var d8QtyLbl: UILabel!
@@ -20,21 +28,24 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var d20QtyLbl: UILabel!
     @IBOutlet weak var d100QtyLbl: UILabel!
     
-    @IBOutlet weak var d6DDImg: UIImageView!
-    @IBOutlet weak var d6TradImg: UIImageView!
+    @IBOutlet weak var d6DDImg: SelectedSixSidedImage!
+    @IBOutlet weak var d6TradImg: SelectedSixSidedImage!
     
     @IBOutlet weak var diceSizeLbl: UILabel!
     @IBOutlet weak var diceQtyLbl: UILabel!
     
     @IBOutlet weak var diceCollectionView: UICollectionView!
+
     
-//    stepper test
+// Unused Variables
+//    var resetValue = false
+//    var stepperQty = 0
+//    var segmentedSelectionResult = 0
+
     
-    var stepperQty = 0
-    
-    var diceQtyArr = [0.0,0.0,3.0,0.0,0.0,0.0,0.0]
-    var resetValue = false
-//
+    var diceQtyLblsArr:[UILabel] = []
+    var diceStepperArr:[UIStepper] = []
+    var diceQtyArr:[Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
     
     var diceQty = 1
     var diceSize = 6
@@ -43,15 +54,18 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var diceTypeQty = [Int]()
     var diceTypeQtyLbls = [UILabel]()
     
-    var segmentedSelectionResult = 0
-    
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
-        
+
+        diceStepperArr = [d4Stepper, d6Stepper, d8Stepper, d10Stepper,d12Stepper, d20Stepper, d100Stepper]
+        diceQtyLblsArr = [d4QtyLbl, d6QtyLbl, d8QtyLbl, d10QtyLbl, d12QtyLbl, d20QtyLbl, d100QtyLbl]
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
     
+        d6DDImg.isHighlighted = true
+        d6TradImg.isHighlighted = false
+        
        /* diceTypeQtyLbls = [diceChoiceLbl00, diceChoiceLbl01, diceChoiceLbl02, diceChoiceLbl03, diceChoiceLbl04, diceChoiceLbl05, diceChoiceLbl06]
         
         super.viewDidLoad()
@@ -93,40 +107,54 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
         panActivated(viewConstraint: viewConstraint, panInfo: sender)
     }
-   
-    
-  /*  @IBAction func sixSidedTypeChose(_ sender: UISwitch) {
-        d6Choice = sender.isOn
-        OptionsResults.instance.sixSidedTypeChoose(d6TypeLbl: d6SelectionLbl, tradTypeLbl: traditionalSelectedLbl, d6TradImage: diceTypeImage, switchResult: sender)
-    } */
     
     @IBAction func rollBtn(_ sender: UIButton) {
-        dice = DiceArrayFill.instance.arrayFill(diceSize: diceSize, diceQty: diceQty, d6Choice: d6Choice)
+        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
         diceCollectionView.reloadData()
     }
     
-/*    stepper test actions
-    @IBAction func qtyStep(_ sender: UIStepper) {
-        
-       /******************************************
-        ******************************************
-        Some indicator that the step has been made
-        so the value can increment/decrement. As
-        it is, the code sees that the value isn't 0
-        and refuses to change it from the if
-        statement.
-        *******************************************
-        ******************************************/
-        
-        if (diceQtyArr[2] > 0) && (resetValue == false) {
-            sender.value = diceQtyArr[2]
-            resetValue = true
-        }
-        stepperQty = Int(sender.value)
-//        stepperLbl.text = "\(Int(sender.value))"
-        stepperLbl.text = "\(stepperQty)"
-        
+    @IBAction func d4Step(_ sender: UIStepper) {
+        diceQtyArr[0] = diceStepSelection(stepValue: sender, stepLbl: d4QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
     }
-*/
+    @IBAction func d6Step(_ sender: UIStepper) {
+        diceQtyArr[1] = diceStepSelection(stepValue: sender, stepLbl: d6QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
+    @IBAction func d8Step(_ sender: UIStepper) {
+        diceQtyArr[2] = diceStepSelection(stepValue: sender, stepLbl: d8QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
+    @IBAction func d10Step(_ sender: UIStepper) {
+        diceQtyArr[3] = diceStepSelection(stepValue: sender, stepLbl: d10QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
+    @IBAction func d12Step(_ sender: UIStepper) {
+        diceQtyArr[4] = diceStepSelection(stepValue: sender, stepLbl: d12QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
+    @IBAction func d20Step(_ sender: UIStepper) {
+        diceQtyArr[5] = diceStepSelection(stepValue: sender, stepLbl: d20QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
+    @IBAction func d100Step(_ sender: UIStepper) {
+        diceQtyArr[6] = diceStepSelection(stepValue: sender, stepLbl: d100QtyLbl)
+//        print("dice qty array values: \(diceQtyArr)")
+    }
     
+    @IBAction func d6AppearanceSwitch(_ sender: UISwitch) {
+        d6Choice = d6SwitchOnOff(d6AppearenceSwitch: sender, d6DDImg: d6DDImg, d6TradImg: d6TradImg)
+//        print("switch set to \(d6Choice)")
+        /*if sender.isOn {
+            d6DDImg.deselected()
+            d6TradImg.selected()
+        } else {
+            d6DDImg.selected()
+            d6TradImg.deselected()
+        }*/
+    }
+    
+    @IBAction func menuReset(_ sender: UIButton) {
+        diceQtyArr = ResetButton.instance.resetAllMenuItems(diceQtyLbls: diceQtyLblsArr, diceStepVal: diceStepperArr)
+    }
 }
