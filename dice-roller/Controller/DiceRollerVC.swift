@@ -31,17 +31,7 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var d6DDImg: SelectedSixSidedImage!
     @IBOutlet weak var d6TradImg: SelectedSixSidedImage!
     
-    @IBOutlet weak var diceSizeLbl: UILabel!
-    @IBOutlet weak var diceQtyLbl: UILabel!
-    
     @IBOutlet weak var diceCollectionView: UICollectionView!
-
-    
-// Unused Variables
-//    var resetValue = false
-//    var stepperQty = 0
-//    var segmentedSelectionResult = 0
-
     
     var diceQtyLblsArr:[UILabel] = []
     var diceStepperArr:[UIStepper] = []
@@ -65,20 +55,12 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
         d6DDImg.isHighlighted = true
         d6TradImg.isHighlighted = false
-        
-       /* diceTypeQtyLbls = [diceChoiceLbl00, diceChoiceLbl01, diceChoiceLbl02, diceChoiceLbl03, diceChoiceLbl04, diceChoiceLbl05, diceChoiceLbl06]
-        
-        super.viewDidLoad()
-        d6SelectionLbl.selected()
-        traditionalSelectedLbl.deselected()
-        d6StackView.isHidden = false
-        diceTypeImage.image = UIImage(named: "d6_img5.png")
- */
-        
-        viewConstraint.constant = -340
        
-        diceSizeLbl.text = "Dice Size: d\(diceSize)"
-        diceQtyLbl.text = "Number of Dice: \(diceQty)"
+        if self.view.frame.width > 600{
+            viewConstraint.constant = -460
+        } else {
+            viewConstraint.constant = -340
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -99,13 +81,19 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = ((self.view.frame.size.width - 20) / 5)
-        let height = (width * 1.5)
-        return CGSize(width: ((self.view.frame.size.width - 20) / 5), height: height)
+        var width: CGFloat
+        if self.view.frame.width > 600 {
+            width = ((self.view.frame.size.width - 20) / 6)
+        } else {
+            width = ((self.view.frame.size.width - 20) / 5)
+        }
+        let height = width
+//        let height = (width * 1.7)
+        return CGSize(width: width, height: height)
     }
     
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
-        panActivated(viewConstraint: viewConstraint, panInfo: sender)
+        panActivated(viewConstraint: viewConstraint, panInfo: sender, screenWidth: self.view.frame.width)
     }
     
     @IBAction func rollBtn(_ sender: UIButton) {
@@ -115,43 +103,28 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBAction func d4Step(_ sender: UIStepper) {
         diceQtyArr[0] = diceStepSelection(stepValue: sender, stepLbl: d4QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d6Step(_ sender: UIStepper) {
         diceQtyArr[1] = diceStepSelection(stepValue: sender, stepLbl: d6QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d8Step(_ sender: UIStepper) {
         diceQtyArr[2] = diceStepSelection(stepValue: sender, stepLbl: d8QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d10Step(_ sender: UIStepper) {
         diceQtyArr[3] = diceStepSelection(stepValue: sender, stepLbl: d10QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d12Step(_ sender: UIStepper) {
         diceQtyArr[4] = diceStepSelection(stepValue: sender, stepLbl: d12QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d20Step(_ sender: UIStepper) {
         diceQtyArr[5] = diceStepSelection(stepValue: sender, stepLbl: d20QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     @IBAction func d100Step(_ sender: UIStepper) {
         diceQtyArr[6] = diceStepSelection(stepValue: sender, stepLbl: d100QtyLbl)
-//        print("dice qty array values: \(diceQtyArr)")
     }
     
     @IBAction func d6AppearanceSwitch(_ sender: UISwitch) {
         d6Choice = d6SwitchOnOff(d6AppearenceSwitch: sender, d6DDImg: d6DDImg, d6TradImg: d6TradImg)
-//        print("switch set to \(d6Choice)")
-        /*if sender.isOn {
-            d6DDImg.deselected()
-            d6TradImg.selected()
-        } else {
-            d6DDImg.selected()
-            d6TradImg.deselected()
-        }*/
     }
     
     @IBAction func menuReset(_ sender: UIButton) {

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureRecognizer) {
+func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureRecognizer, screenWidth: CGFloat) {
     if (panInfo.state == .began || panInfo.state == .changed){
         let translation = panInfo.translation(in: panInfo.view).x
         if translation > 0 {
@@ -17,6 +17,7 @@ func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureReco
                 UIView.animate(withDuration: 0.5, animations: {
                     viewConstraint.constant += translation / 10
                     panInfo.view?.layoutIfNeeded()
+                    print(screenWidth)
 
                 })
             }
@@ -30,10 +31,17 @@ func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureReco
         }
     } else if panInfo.state == .ended {
         if viewConstraint.constant < -110 {
-            UIView.animate(withDuration: 0.5, animations: {
-                viewConstraint.constant = -340
-                panInfo.view?.layoutIfNeeded()
-            })
+            if screenWidth > 500{
+                UIView.animate(withDuration: 0.5, animations: {
+                    viewConstraint.constant = -460
+                    panInfo.view?.layoutIfNeeded()
+                })
+            } else {
+                UIView.animate(withDuration: 0.5, animations: {
+                    viewConstraint.constant = -340
+                    panInfo.view?.layoutIfNeeded()
+                })
+            }
         } else {
             UIView.animate(withDuration: 0.5, animations: {
                 viewConstraint.constant = 0
