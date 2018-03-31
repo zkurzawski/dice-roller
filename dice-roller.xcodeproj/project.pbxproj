@@ -24,6 +24,7 @@
 		3CB62E962009AD1200D8D72A /* DiceRollerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */; };
 		3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */; };
 		3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */; };
+		3CD4B756206F302E00509C53 /* d6TypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4B755206F302E00509C53 /* d6TypeSelection.swift */; };
 		3CE881592061F2F700ACAE8E /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE881582061F2F700ACAE8E /* ResetButton.swift */; };
 		3CE8815B2062882F00ACAE8E /* SelectedSixSidedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8815A2062882F00ACAE8E /* SelectedSixSidedImage.swift */; };
 		3CE8815D2063476700ACAE8E /* DiceStepSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8815C2063476700ACAE8E /* DiceStepSelection.swift */; };
@@ -71,6 +72,7 @@
 		3CB62E952009AD1200D8D72A /* DiceRollerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerVC.swift; sourceTree = "<group>"; };
 		3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenu.swift; sourceTree = "<group>"; };
 		3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurMenu.swift; sourceTree = "<group>"; };
+		3CD4B755206F302E00509C53 /* d6TypeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d6TypeSelection.swift; sourceTree = "<group>"; };
 		3CE881582061F2F700ACAE8E /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		3CE8815A2062882F00ACAE8E /* SelectedSixSidedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSixSidedImage.swift; sourceTree = "<group>"; };
 		3CE8815C2063476700ACAE8E /* DiceStepSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceStepSelection.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				3CE881582061F2F700ACAE8E /* ResetButton.swift */,
 				3CE8815C2063476700ACAE8E /* DiceStepSelection.swift */,
 				3CE8815E20634F7800ACAE8E /* d6SwitchOnOff.swift */,
+				3CD4B755206F302E00509C53 /* d6TypeSelection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			files = (
 				3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */,
 				3CE8815D2063476700ACAE8E /* DiceStepSelection.swift in Sources */,
+				3CD4B756206F302E00509C53 /* d6TypeSelection.swift in Sources */,
 				3C89822D2015483F00D1668A /* PanGestureFunctionality.swift in Sources */,
 				3C1539BC201CBC2800D239A4 /* OptionsResults.swift in Sources */,
 				3C8982232010D91C00D1668A /* DiceArrayFill.swift in Sources */,

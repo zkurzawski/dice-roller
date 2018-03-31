@@ -9,6 +9,9 @@
 import UIKit
 
 class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var tradBtn: UIButton!
+    @IBOutlet weak var ddBtn: UIButton!
 
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
@@ -27,9 +30,6 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var d12QtyLbl: UILabel!
     @IBOutlet weak var d20QtyLbl: UILabel!
     @IBOutlet weak var d100QtyLbl: UILabel!
-    
-    @IBOutlet weak var d6DDImg: SelectedSixSidedImage!
-    @IBOutlet weak var d6TradImg: SelectedSixSidedImage!
     
     @IBOutlet weak var diceCollectionView: UICollectionView!
     
@@ -53,9 +53,6 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
     
-        d6DDImg.isHighlighted = true
-        d6TradImg.isHighlighted = false
-       
         if self.view.frame.width > 600{
             viewConstraint.constant = -460
         } else {
@@ -123,11 +120,18 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         diceQtyArr[6] = diceStepSelection(stepValue: sender, stepLbl: d100QtyLbl)
     }
     
-    @IBAction func d6AppearanceSwitch(_ sender: UISwitch) {
-        d6Choice = d6SwitchOnOff(d6AppearenceSwitch: sender, d6DDImg: d6DDImg, d6TradImg: d6TradImg)
-    }
-    
     @IBAction func menuReset(_ sender: UIButton) {
         diceQtyArr = ResetButton.instance.resetAllMenuItems(diceQtyLbls: diceQtyLblsArr, diceStepVal: diceStepperArr)
     }
+    
+    @IBAction func ddBtnPushed(_ sender: UIButton) {
+        d6TypeSelected(btnPushed: ddBtn, btnNotPushed: tradBtn)
+        d6Choice = true
+    }
+    
+    @IBAction func tradBtnPushed(_ sender: UIButton) {
+        d6TypeSelected(btnPushed: tradBtn, btnNotPushed: ddBtn)
+        d6Choice = false
+    }
+    
 }

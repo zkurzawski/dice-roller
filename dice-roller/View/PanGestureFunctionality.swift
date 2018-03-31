@@ -17,8 +17,6 @@ func panActivated (viewConstraint: NSLayoutConstraint, panInfo: UIPanGestureReco
                 UIView.animate(withDuration: 0.5, animations: {
                     viewConstraint.constant += translation / 10
                     panInfo.view?.layoutIfNeeded()
-                    print(screenWidth)
-
                 })
             }
         } else {

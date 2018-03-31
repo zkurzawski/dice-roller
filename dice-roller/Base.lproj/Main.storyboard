@@ -108,7 +108,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;  swipe left to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-XO-GLS">
-                                                    <rect key="frame" x="80" y="682.66666666666663" width="161" height="23.333333333333371"/>
+                                                    <rect key="frame" x="80" y="692.66666666666663" width="161" height="23.333333333333371"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -116,17 +116,8 @@
                                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
                                                     </variation>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-FV-S6P">
-                                                    <rect key="frame" x="136" y="405" width="51" height="31"/>
-                                                    <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="onTintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="thumbTintColor" red="0.80003798010000005" green="0.80000758169999997" blue="0.80002808569999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <connections>
-                                                        <action selector="d6AppearanceSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVg-6L-daP"/>
-                                                    </connections>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D6 Appearance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-52-FAA">
-                                                    <rect key="frame" x="73.333333333333314" y="362" width="174" height="33"/>
+                                                    <rect key="frame" x="73.333333333333314" y="357" width="174" height="33"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -557,14 +548,11 @@
                                                     <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-Xt-fFA" customClass="ButtonAppearance" customModule="dice_roller" customModuleProvider="target">
-                                                    <rect key="frame" x="85" y="632.66666666666663" width="150" height="30"/>
+                                                    <rect key="frame" x="50" y="652.66666666666663" width="220" height="30"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="T0E-Pt-NbK">
                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="width" constant="150" id="Uyy-mj-LT2">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="400"/>
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
@@ -578,51 +566,63 @@
                                                         <action selector="menuReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRN-oC-h8C"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5_dim" highlightedImage="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-z0-JYX" customClass="SelectedSixSidedImage" customModule="dice_roller" customModuleProvider="target">
-                                                    <rect key="frame" x="201" y="397" width="46" height="46"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="46" id="KRd-c1-Hek">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="92"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="width" constant="46" id="pyh-fh-42A">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="92"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5_dim" highlightedImage="d6_img5" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-OR-7oq" customClass="SelectedSixSidedImage" customModule="dice_roller" customModuleProvider="target">
-                                                    <rect key="frame" x="73" y="397" width="46" height="46"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="cTl-Hs-PQW">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="92"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="height" constant="46" id="nIS-pW-JbZ">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="92"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vlg-JJ-S8W">
+                                                    <rect key="frame" x="90.666666666666686" y="395" width="140" height="60"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7y-bA-Uab">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="TFq-iQ-E3K">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="height" constant="60" id="zaX-aa-9Zz">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                </constraint>
+                                                            </constraints>
+                                                            <state key="normal" image="d6_reg_img"/>
+                                                            <connections>
+                                                                <action selector="tradBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FyT-oM-qld"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-Wh-VDh">
+                                                            <rect key="frame" x="79.999999999999986" y="0.0" width="60.000000000000014" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="Gbi-z0-Usz">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="height" constant="60" id="TAY-dh-UEl">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                </constraint>
+                                                            </constraints>
+                                                            <state key="normal" image="d6_dim_img"/>
+                                                            <connections>
+                                                                <action selector="ddBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTO-oB-PXH"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Lvl-Xt-fFA" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="3II-Px-dMe"/>
-                                                <constraint firstItem="hTr-z0-JYX" firstAttribute="leading" secondItem="KvJ-FV-S6P" secondAttribute="trailing" constant="16" id="56u-5Z-1VL"/>
-                                                <constraint firstItem="hTr-z0-JYX" firstAttribute="centerY" secondItem="KvJ-FV-S6P" secondAttribute="centerY" id="5oC-IL-xFk"/>
-                                                <constraint firstItem="KvJ-FV-S6P" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="C0z-y4-M9Q"/>
                                                 <constraint firstItem="KE7-52-FAA" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="Ilp-Yr-ui2"/>
                                                 <constraint firstItem="KE7-52-FAA" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="Owr-GL-eyX"/>
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="UUz-z0-HqW"/>
-                                                <constraint firstItem="KE7-52-FAA" firstAttribute="top" secondItem="jNL-b7-KT4" secondAttribute="bottom" constant="20" id="Vrx-Uw-ib6"/>
-                                                <constraint firstItem="KvJ-FV-S6P" firstAttribute="top" secondItem="KE7-52-FAA" secondAttribute="bottom" constant="10" id="ZoC-TR-xgP">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                <constraint firstItem="KE7-52-FAA" firstAttribute="top" secondItem="jNL-b7-KT4" secondAttribute="bottom" constant="15" id="Vrx-Uw-ib6">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
                                                 </constraint>
+                                                <constraint firstItem="vlg-JJ-S8W" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="WN8-VG-ygQ"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="bWE-GB-oPA"/>
                                                 <constraint firstItem="jNL-b7-KT4" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="dYC-oS-bwH"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="40" id="g2T-LH-u6c"/>
                                                 <constraint firstItem="jNL-b7-KT4" firstAttribute="top" secondItem="gFX-vg-nEq" secondAttribute="bottom" constant="10" id="l2G-h7-Aqp">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                                 </constraint>
-                                                <constraint firstItem="KvJ-FV-S6P" firstAttribute="leading" secondItem="CfR-OR-7oq" secondAttribute="trailing" constant="17" id="obw-eR-zck"/>
-                                                <constraint firstItem="CfR-OR-7oq" firstAttribute="centerY" secondItem="KvJ-FV-S6P" secondAttribute="centerY" id="pfZ-Ng-uJV"/>
-                                                <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="30" id="tix-VS-4xE"/>
-                                                <constraint firstItem="SCF-XO-GLS" firstAttribute="top" secondItem="Lvl-Xt-fFA" secondAttribute="bottom" constant="20" id="xkL-Ke-ape"/>
+                                                <constraint firstItem="vlg-JJ-S8W" firstAttribute="top" secondItem="KE7-52-FAA" secondAttribute="bottom" constant="5" id="nzU-eT-fBF"/>
+                                                <constraint firstItem="Lvl-Xt-fFA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="50" id="q8G-Qy-hfe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lvl-Xt-fFA" secondAttribute="trailing" constant="50" id="t8E-ul-M42"/>
+                                                <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="20" id="tix-VS-4xE"/>
+                                                <constraint firstItem="SCF-XO-GLS" firstAttribute="top" secondItem="Lvl-Xt-fFA" secondAttribute="bottom" constant="10" id="xkL-Ke-ape">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                                </constraint>
                                             </constraints>
                                         </view>
                                         <blurEffect style="light"/>
@@ -680,13 +680,13 @@
                         <outlet property="d20Stepper" destination="anj-aW-6Wd" id="YPs-t9-sI9"/>
                         <outlet property="d4QtyLbl" destination="TO3-8n-Utk" id="Ukb-yk-kYF"/>
                         <outlet property="d4Stepper" destination="h0j-tV-dTl" id="7Tc-lS-96J"/>
-                        <outlet property="d6DDImg" destination="CfR-OR-7oq" id="7QV-ig-JTa"/>
                         <outlet property="d6QtyLbl" destination="gmB-y5-HO0" id="bfe-bq-z1X"/>
                         <outlet property="d6Stepper" destination="bhV-nR-aZu" id="RaD-ep-twx"/>
-                        <outlet property="d6TradImg" destination="hTr-z0-JYX" id="Zem-jq-kpg"/>
                         <outlet property="d8QtyLbl" destination="zB2-hO-wBt" id="Oa8-3j-CFQ"/>
                         <outlet property="d8Stepper" destination="TjK-CF-dPg" id="Jdz-6Q-FCr"/>
+                        <outlet property="ddBtn" destination="U3q-Wh-VDh" id="UO0-OU-Smi"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
+                        <outlet property="tradBtn" destination="P7y-bA-Uab" id="xEi-6x-88h"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
                     </connections>
                 </viewController>
@@ -697,12 +697,13 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="32.833583208395808"/>
+            <point key="canvasLocation" x="30.434782608695656" y="32.608695652173914"/>
         </scene>
     </scenes>
     <resources>
+        <image name="d6_dim_img" width="200" height="200"/>
         <image name="d6_img5" width="100" height="100"/>
-        <image name="d6_img5_dim" width="170" height="170"/>
+        <image name="d6_reg_img" width="200" height="200"/>
         <image name="woodBlur" width="3456" height="5184"/>
     </resources>
 </document>
