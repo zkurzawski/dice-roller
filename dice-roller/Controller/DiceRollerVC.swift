@@ -52,12 +52,13 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         diceQtyLblsArr = [d4QtyLbl, d6QtyLbl, d8QtyLbl, d10QtyLbl, d12QtyLbl, d20QtyLbl, d100QtyLbl]
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
-    
+        
         if self.view.frame.width > 600{
             viewConstraint.constant = -460
         } else {
             viewConstraint.constant = -340
         }
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -89,8 +90,17 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         return CGSize(width: width, height: height)
     }
     
+  
     @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
         panActivated(viewConstraint: viewConstraint, panInfo: sender, screenWidth: self.view.frame.width)
+    }
+    
+    
+    @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
+        print("left")
+    }
+    @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+        print("right")
     }
     
     @IBAction func rollBtn(_ sender: UIButton) {

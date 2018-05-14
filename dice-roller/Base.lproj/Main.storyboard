@@ -667,6 +667,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gO8-BG-oko" appends="YES" id="MNM-6e-kbr"/>
+                            <outletCollection property="gestureRecognizers" destination="WTH-G6-D2j" appends="YES" id="pRr-Nh-16v"/>
+                            <outletCollection property="gestureRecognizers" destination="WfL-Ym-02O" appends="YES" id="u3J-Lx-jDL"/>
                         </connections>
                     </view>
                     <connections>
@@ -691,11 +693,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="gO8-BG-oko">
+                <panGestureRecognizer enabled="NO" minimumNumberOfTouches="1" id="gO8-BG-oko">
                     <connections>
                         <action selector="panGestureDone:" destination="BYZ-38-t0r" id="Fmn-FE-mHf"/>
                     </connections>
                 </panGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="WTH-G6-D2j">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="LVF-tp-XOz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="WfL-Ym-02O">
+                    <connections>
+                        <action selector="leftSwipe:" destination="BYZ-38-t0r" id="OZV-8b-Auo"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="30.434782608695656" y="32.608695652173914"/>
         </scene>
