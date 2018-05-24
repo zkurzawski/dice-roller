@@ -55,10 +55,10 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         
         if self.view.frame.width > 600{
             viewConstraint.constant = -460
+            
         } else {
             viewConstraint.constant = -340
         }
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -97,10 +97,10 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
-        print("left")
+        leftSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
     }
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
-        print("right")
+        rightSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
     }
     
     @IBAction func rollBtn(_ sender: UIButton) {
