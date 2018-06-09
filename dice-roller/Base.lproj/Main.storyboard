@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-            <string>AvenirNext-DemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Dice RollerVC-->
         <scene sceneID="tne-QT-ifu">
@@ -49,6 +43,12 @@
                                     <action selector="rollBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mkJ-yt-n87"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="open the options menu by swiping right to set your dice quatities and types before rolling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
+                                <rect key="frame" x="20" y="248.33333333333331" width="374" height="239.33333333333331"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
+                                <color key="textColor" red="0.70588235294117652" green="0.65490196078431373" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
                                 <rect key="frame" x="10" y="103.33333333333331" width="394" height="539.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -579,12 +579,12 @@
                                                                     <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                                                 </constraint>
                                                             </constraints>
-                                                            <state key="normal" image="d6_reg_img"/>
+                                                            <state key="normal" image="trad_img5"/>
                                                             <connections>
                                                                 <action selector="tradBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FyT-oM-qld"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-Wh-VDh">
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-Wh-VDh" userLabel="Dd Btn">
                                                             <rect key="frame" x="79.999999999999986" y="0.0" width="60.000000000000014" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="Gbi-z0-Usz">
@@ -594,7 +594,7 @@
                                                                     <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                                                 </constraint>
                                                             </constraints>
-                                                            <state key="normal" image="d6_dim_img"/>
+                                                            <state key="normal" image="d6dim"/>
                                                             <connections>
                                                                 <action selector="ddBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTO-oB-PXH"/>
                                                             </connections>
@@ -644,7 +644,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yxd-tH-iYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1HO-14-93w"/>
+                            <constraint firstItem="HoG-ra-wzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2sz-vB-JPn"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6fJ-1Y-9L1"/>
+                            <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7OD-d9-cQF"/>
                             <constraint firstAttribute="bottom" secondItem="bmm-pF-ogb" secondAttribute="bottom" id="CWx-tZ-oPQ"/>
                             <constraint firstItem="Yxd-tH-iYJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cyu-YO-xtk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="30" id="Fod-on-qMu"/>
@@ -654,12 +656,14 @@
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJC-tq-YdJ"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tsq-iy-Y9L"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-YL-Z0t"/>
+                            <constraint firstItem="HoG-ra-wzL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UjN-Lw-tmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="VHC-A2-wTg">
                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                             </constraint>
                             <constraint firstItem="esE-4s-hC4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Vuv-eI-BFc">
                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                             </constraint>
+                            <constraint firstAttribute="trailing" secondItem="HoG-ra-wzL" secondAttribute="trailing" constant="20" id="f24-Z7-yAd"/>
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="40" id="fyy-kJ-ef9"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="10" id="kp5-lD-XZI"/>
@@ -688,6 +692,7 @@
                         <outlet property="d8Stepper" destination="TjK-CF-dPg" id="Jdz-6Q-FCr"/>
                         <outlet property="ddBtn" destination="U3q-Wh-VDh" id="UO0-OU-Smi"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
+                        <outlet property="startingDirectionLbl" destination="HoG-ra-wzL" id="xa8-rX-gvh"/>
                         <outlet property="tradBtn" destination="P7y-bA-Uab" id="xEi-6x-88h"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
                     </connections>
@@ -713,9 +718,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="d6_dim_img" width="200" height="200"/>
         <image name="d6_img5" width="100" height="100"/>
-        <image name="d6_reg_img" width="200" height="200"/>
+        <image name="d6dim" width="81" height="81"/>
+        <image name="trad_img5" width="81" height="81"/>
         <image name="woodBlur" width="3456" height="5184"/>
     </resources>
 </document>

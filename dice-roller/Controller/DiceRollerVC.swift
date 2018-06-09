@@ -15,6 +15,8 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
 
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
+    @IBOutlet weak var startingDirectionLbl: UILabel!
+    
     @IBOutlet weak var d4Stepper: UIStepper!
     @IBOutlet weak var d6Stepper: UIStepper!
     @IBOutlet weak var d8Stepper: UIStepper!
@@ -39,7 +41,9 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     var diceQty = 1
     var diceSize = 6
-    var d6Choice = false
+    var d6Choice = true
+    
+    var dieHasBeenSelected = false
     
     var diceTypeQty = [Int]()
     var diceTypeQtyLbls = [UILabel]()
@@ -65,6 +69,11 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         return UIStatusBarStyle.lightContent
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print("you shook me")
+        diceRolled()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dice.count
     }
@@ -76,6 +85,14 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
             return cell
         }
         return DiceCell()
+    }
+    
+    func diceRolled() {
+        if dieHasBeenSelected{
+            startingDirectionLbl.isHidden = true
+        }
+        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
+        diceCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -104,44 +121,54 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @IBAction func rollBtn(_ sender: UIButton) {
-        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
-        diceCollectionView.reloadData()
+        diceRolled()
     }
     
     @IBAction func d4Step(_ sender: UIStepper) {
         diceQtyArr[0] = diceStepSelection(stepValue: sender, stepLbl: d4QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d6Step(_ sender: UIStepper) {
         diceQtyArr[1] = diceStepSelection(stepValue: sender, stepLbl: d6QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d8Step(_ sender: UIStepper) {
         diceQtyArr[2] = diceStepSelection(stepValue: sender, stepLbl: d8QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d10Step(_ sender: UIStepper) {
         diceQtyArr[3] = diceStepSelection(stepValue: sender, stepLbl: d10QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d12Step(_ sender: UIStepper) {
         diceQtyArr[4] = diceStepSelection(stepValue: sender, stepLbl: d12QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d20Step(_ sender: UIStepper) {
         diceQtyArr[5] = diceStepSelection(stepValue: sender, stepLbl: d20QtyLbl)
+        dieHasBeenSelected = true
     }
     @IBAction func d100Step(_ sender: UIStepper) {
         diceQtyArr[6] = diceStepSelection(stepValue: sender, stepLbl: d100QtyLbl)
+        dieHasBeenSelected = true
     }
     
     @IBAction func menuReset(_ sender: UIButton) {
         diceQtyArr = ResetButton.instance.resetAllMenuItems(diceQtyLbls: diceQtyLblsArr, diceStepVal: diceStepperArr)
+        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
+        diceCollectionView.reloadData()
+        startingDirectionLbl.isHidden = false
+        dieHasBeenSelected = false
     }
     
     @IBAction func ddBtnPushed(_ sender: UIButton) {
-        d6TypeSelected(btnPushed: ddBtn, btnNotPushed: tradBtn)
-        d6Choice = true
+        d6Choice = false
+        d6TypeSelected(btnPushed: ddBtn, btnNotPushed: tradBtn, d6Chosen: d6Choice)
     }
     
     @IBAction func tradBtnPushed(_ sender: UIButton) {
-        d6TypeSelected(btnPushed: tradBtn, btnNotPushed: ddBtn)
-        d6Choice = false
+        d6Choice = true
+        d6TypeSelected(btnPushed: tradBtn, btnNotPushed: ddBtn, d6Chosen: d6Choice)
     }
     
 }

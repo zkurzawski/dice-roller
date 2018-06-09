@@ -26,7 +26,7 @@ func leftSwipeActivated(viewConstraint: NSLayoutConstraint, swipeInfo: UISwipeGe
 
 func rightSwipeActivated(viewConstraint: NSLayoutConstraint, swipeInfo: UISwipeGestureRecognizer, screenWidth: CGFloat) {
     UIView.animate(withDuration: 0.5, animations: {
-        viewConstraint.constant = 3
+        viewConstraint.constant = 1
         swipeInfo.view?.layoutIfNeeded()
         })
 }
