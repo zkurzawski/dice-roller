@@ -13,8 +13,13 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var tradBtn: UIButton!
     @IBOutlet weak var ddBtn: UIButton!
 
+    @IBOutlet weak var rollBtn: ButtonAppearance!
     @IBOutlet weak var viewConstraint: NSLayoutConstraint!
    
+//    test button for accesibility
+    @IBOutlet weak var optionsButton: UIButton!
+    @IBOutlet weak var closeOptionsBtn: UIButton!
+    
     @IBOutlet weak var startingDirectionLbl: UILabel!
     
     @IBOutlet weak var d4Stepper: UIStepper!
@@ -38,6 +43,8 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var diceQtyLblsArr:[UILabel] = []
     var diceStepperArr:[UIStepper] = []
     var diceQtyArr:[Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+    var hiddenBtns:[UIButton] = []
+    var hiddenLbls:[UILabel] = []
     
     var diceQty = 1
     var diceSize = 6
@@ -47,16 +54,22 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     var diceTypeQty = [Int]()
     var diceTypeQtyLbls = [UILabel]()
-    
+        
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
-
+        
+        accessibilityValueInitializer(rollBtn: rollBtn, optionsBtn: optionsButton, closeBtn: closeOptionsBtn)
+ 
         diceStepperArr = [d4Stepper, d6Stepper, d8Stepper, d10Stepper,d12Stepper, d20Stepper, d100Stepper]
         diceQtyLblsArr = [d4QtyLbl, d6QtyLbl, d8QtyLbl, d10QtyLbl, d12QtyLbl, d20QtyLbl, d100QtyLbl]
+        
+        hiddenLbls = [startingDirectionLbl]
+        hiddenBtns = [optionsButton, rollBtn]
+        
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
-        
+       
         if self.view.frame.width > 600{
             viewConstraint.constant = -460
             
@@ -107,14 +120,19 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         return CGSize(width: width, height: height)
     }
     
-  
-    @IBAction func panGestureDone(_ sender: UIPanGestureRecognizer) {
-        panActivated(viewConstraint: viewConstraint, panInfo: sender, screenWidth: self.view.frame.width)
+    @IBAction func openOptions(_ sender: UIButton) {
+        accessibilityOpenMenu(viewConstraint: viewConstraint, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: true)
     }
     
+    @IBAction func closeOptions(_ sender: UIButton) {
+        accessibilityCloseMenu(viewConstraint: viewConstraint, screenWidth: self.view.frame.width, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view, diceRolled: dieHasBeenSelected)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false)
+    }
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
         leftSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false)
     }
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
         rightSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)

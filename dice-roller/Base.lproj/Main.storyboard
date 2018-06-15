@@ -23,8 +23,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right for options  &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-tH-iYJ">
-                                <rect key="frame" x="108.33333333333333" y="40" width="197.66666666666669" height="23.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right for options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-tH-iYJ">
+                                <rect key="frame" x="118.33333333333333" y="40" width="177.66666666666669" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,14 +43,14 @@
                                     <action selector="rollBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mkJ-yt-n87"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="open the options menu by swiping right to set your dice quatities and types before rolling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
-                                <rect key="frame" x="20" y="248.33333333333331" width="374" height="239.33333333333331"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set your dice quantities and types before rolling by swiping right or tapping the options button at the top of the screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
+                                <rect key="frame" x="20" y="297" width="374" height="142.33333333333337"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                 <color key="textColor" red="0.70588235294117652" green="0.65490196078431373" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
-                                <rect key="frame" x="10" y="103.33333333333331" width="394" height="539.66666666666674"/>
+                                <rect key="frame" x="10" y="116" width="394" height="527"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="10" id="PVm-nA-NCW">
                                     <size key="itemSize" width="0.0" height="0.0"/>
@@ -66,6 +66,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d6_img5" translatesAutoresizingMaskIntoConstraints="NO" id="qJX-o7-Sw5">
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qJX-o7-Sw5" secondAttribute="height" multiplier="1:1" id="OF7-s1-s9W"/>
                                                     </constraints>
@@ -84,6 +87,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-WJ-eZJ">
+                                <rect key="frame" x="20" y="40" width="64" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkV-eJ-0hM"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideOutMenu" customModule="dice_roller" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                                 <subviews>
@@ -94,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Quantities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-vg-nEq">
-                                                    <rect key="frame" x="81.666666666666671" y="40" width="157.33333333333331" height="22"/>
+                                                    <rect key="frame" x="81.666666666666671" y="60" width="157.33333333333331" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="DJR-ev-iDS">
                                                             <variation key="heightClass=regular-widthClass=regular" constant="40"/>
@@ -107,8 +120,11 @@
                                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;  swipe left to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-XO-GLS">
-                                                    <rect key="frame" x="80" y="692.66666666666663" width="161" height="23.333333333333371"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe left to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-XO-GLS">
+                                                    <rect key="frame" x="90.000000000000014" y="692.66666666666663" width="141.33333333333337" height="23.333333333333371"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -117,7 +133,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D6 Appearance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-52-FAA">
-                                                    <rect key="frame" x="73.333333333333314" y="357" width="174" height="33"/>
+                                                    <rect key="frame" x="73.333333333333314" y="377" width="174" height="33"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -126,13 +142,16 @@
                                                     </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-b7-KT4" userLabel="Dice Stack">
-                                                    <rect key="frame" x="23.666666666666657" y="72" width="273" height="270"/>
+                                                    <rect key="frame" x="23.666666666666657" y="92" width="273" height="270"/>
                                                     <subviews>
                                                         <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="7Pg-fg-kfM">
                                                             <rect key="frame" x="0.0" y="0.0" width="273" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNV-Zv-OTU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="EjT-y3-P80">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="80"/>
@@ -150,6 +169,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-sa-QRy">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="XLK-Xh-U8k"/>
                                                                         <constraint firstAttribute="height" constant="30" id="dhU-hP-zrw"/>
@@ -192,6 +214,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-4U-Vb1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="8hk-z7-jqe">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -209,6 +234,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-iu-S7Y">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="DCT-Wh-wf5"/>
                                                                         <constraint firstAttribute="height" constant="30" id="V8t-5q-mWd"/>
@@ -251,6 +279,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-jF-bS1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Fuh-Hc-lzi">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -268,6 +299,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj3-uZ-NCb">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="0st-GD-zOq"/>
                                                                         <constraint firstAttribute="height" constant="30" id="XCy-h6-UVJ"/>
@@ -310,6 +344,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="236-x9-8NP">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Lia-aX-OCS">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -327,6 +364,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nm-Dv-Lw1">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="cBX-dY-lzD"/>
                                                                         <constraint firstAttribute="width" constant="30" id="eDY-OK-BCV"/>
@@ -369,6 +409,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-jm-FMn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="NZl-j4-78P">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -386,6 +429,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYo-Pi-DbV">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="UXp-bp-6jM"/>
                                                                         <constraint firstAttribute="width" constant="30" id="ply-QA-lCx"/>
@@ -428,6 +474,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8A-Xr-jwC">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Bza-be-iGh">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -445,6 +494,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEA-oc-qUq">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="OrQ-io-KCv"/>
                                                                         <constraint firstAttribute="width" constant="30" id="QgC-JR-Au8"/>
@@ -487,6 +539,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euP-jg-FP3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="rZk-ae-lrf">
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="80"/>
@@ -504,6 +559,9 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz9-rm-Zdv">
                                                                     <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="NO"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="ivs-4r-2K5"/>
                                                                         <constraint firstAttribute="height" constant="30" id="yCK-gG-Xuq"/>
@@ -567,7 +625,7 @@
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vlg-JJ-S8W">
-                                                    <rect key="frame" x="90.666666666666686" y="395" width="140" height="60"/>
+                                                    <rect key="frame" x="90.666666666666686" y="415" width="140" height="60"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7y-bA-Uab">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -601,8 +659,20 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMH-yR-BwJ">
+                                                    <rect key="frame" x="253" y="20" width="47" height="37"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Close">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="closeOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mm7-u2-0SA"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="60" id="1mN-rK-oYY"/>
+                                                <constraint firstItem="lMH-yR-BwJ" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="20" id="61a-EG-KjM"/>
                                                 <constraint firstItem="KE7-52-FAA" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="Ilp-Yr-ui2"/>
                                                 <constraint firstItem="KE7-52-FAA" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="Owr-GL-eyX"/>
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="UUz-z0-HqW"/>
@@ -612,7 +682,6 @@
                                                 <constraint firstItem="vlg-JJ-S8W" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="WN8-VG-ygQ"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="bWE-GB-oPA"/>
                                                 <constraint firstItem="jNL-b7-KT4" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="dYC-oS-bwH"/>
-                                                <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="40" id="g2T-LH-u6c"/>
                                                 <constraint firstItem="jNL-b7-KT4" firstAttribute="top" secondItem="gFX-vg-nEq" secondAttribute="bottom" constant="10" id="l2G-h7-Aqp">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                                 </constraint>
@@ -623,6 +692,7 @@
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="top" secondItem="Lvl-Xt-fFA" secondAttribute="bottom" constant="10" id="xkL-Ke-ape">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                                 </constraint>
+                                                <constraint firstAttribute="trailing" secondItem="lMH-yR-BwJ" secondAttribute="trailing" constant="20" id="zsh-tL-otX"/>
                                             </constraints>
                                         </view>
                                         <blurEffect style="light"/>
@@ -647,6 +717,7 @@
                             <constraint firstItem="HoG-ra-wzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2sz-vB-JPn"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6fJ-1Y-9L1"/>
                             <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7OD-d9-cQF"/>
+                            <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="2so-WJ-eZJ" secondAttribute="bottom" constant="40" id="BXx-Aq-ajQ"/>
                             <constraint firstAttribute="bottom" secondItem="bmm-pF-ogb" secondAttribute="bottom" id="CWx-tZ-oPQ"/>
                             <constraint firstItem="Yxd-tH-iYJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cyu-YO-xtk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="30" id="Fod-on-qMu"/>
@@ -655,6 +726,7 @@
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kac-ze-Ex4"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJC-tq-YdJ"/>
                             <constraint firstItem="bmm-pF-ogb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tsq-iy-Y9L"/>
+                            <constraint firstItem="2so-WJ-eZJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UH0-24-cPs"/>
                             <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-YL-Z0t"/>
                             <constraint firstItem="HoG-ra-wzL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UjN-Lw-tmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="VHC-A2-wTg">
@@ -665,17 +737,26 @@
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="HoG-ra-wzL" secondAttribute="trailing" constant="20" id="f24-Z7-yAd"/>
                             <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="40" id="fyy-kJ-ef9"/>
+                            <constraint firstItem="2so-WJ-eZJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g4o-HN-qpb"/>
                             <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="hjl-BH-Rz4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="10" id="kp5-lD-XZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yxd-tH-iYJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="fyy-kJ-ef9"/>
+                            </mask>
+                        </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="gO8-BG-oko" appends="YES" id="MNM-6e-kbr"/>
                             <outletCollection property="gestureRecognizers" destination="WTH-G6-D2j" appends="YES" id="pRr-Nh-16v"/>
                             <outletCollection property="gestureRecognizers" destination="WfL-Ym-02O" appends="YES" id="u3J-Lx-jDL"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="closeOptionsBtn" destination="lMH-yR-BwJ" id="YUB-8J-tGb"/>
                         <outlet property="d100QtyLbl" destination="TrP-3I-qH6" id="1Eh-cY-FAA"/>
                         <outlet property="d100Stepper" destination="A60-px-NUb" id="nXL-bs-ZEX"/>
                         <outlet property="d10QtyLbl" destination="Rrc-lh-rpl" id="1JY-8c-YpZ"/>
@@ -692,17 +773,14 @@
                         <outlet property="d8Stepper" destination="TjK-CF-dPg" id="Jdz-6Q-FCr"/>
                         <outlet property="ddBtn" destination="U3q-Wh-VDh" id="UO0-OU-Smi"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
+                        <outlet property="optionsButton" destination="2so-WJ-eZJ" id="gcN-K4-3QZ"/>
+                        <outlet property="rollBtn" destination="esE-4s-hC4" id="Agb-Pn-I4T"/>
                         <outlet property="startingDirectionLbl" destination="HoG-ra-wzL" id="xa8-rX-gvh"/>
                         <outlet property="tradBtn" destination="P7y-bA-Uab" id="xEi-6x-88h"/>
                         <outlet property="viewConstraint" destination="TJC-tq-YdJ" id="Hqj-FK-un7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer enabled="NO" minimumNumberOfTouches="1" id="gO8-BG-oko">
-                    <connections>
-                        <action selector="panGestureDone:" destination="BYZ-38-t0r" id="Fmn-FE-mHf"/>
-                    </connections>
-                </panGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="WTH-G6-D2j">
                     <connections>
                         <action selector="rightSwipe:" destination="BYZ-38-t0r" id="LVF-tp-XOz"/>
