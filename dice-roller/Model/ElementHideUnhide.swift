@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
-func hideUnhideMainViewElements(optionsBtn: UIButton, rollBtn: UIButton, dirLbl: UILabel, onOff: Bool) {
+func hideUnhideMainViewElements(optionsBtn: UIButton, rollBtn: UIButton, dirLbl: UILabel, onOff: Bool, dieSelected: Bool) {
     optionsBtn.isHidden = onOff
     rollBtn.isHidden = onOff
-    dirLbl.isHidden = onOff
+    
+    if dieSelected {
+        dirLbl.isHidden = true
+    } else {
+        dirLbl.isHidden = false
+    }
 }

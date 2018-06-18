@@ -10,6 +10,8 @@ import UIKit
 
 class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var mainView: UIView!
+    
     @IBOutlet weak var tradBtn: UIButton!
     @IBOutlet weak var ddBtn: UIButton!
 
@@ -121,18 +123,20 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @IBAction func openOptions(_ sender: UIButton) {
+        mainView.accessibilityElementsHidden = true
         accessibilityOpenMenu(viewConstraint: viewConstraint, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: true)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: true, dieSelected: dieHasBeenSelected)
     }
     
     @IBAction func closeOptions(_ sender: UIButton) {
+        mainView.accessibilityElementsHidden = false
         accessibilityCloseMenu(viewConstraint: viewConstraint, screenWidth: self.view.frame.width, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view, diceRolled: dieHasBeenSelected)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
         leftSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
         rightSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
