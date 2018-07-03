@@ -5,6 +5,8 @@
 //  Created by Zakary Kurzawski on 1/18/18.
 //  Copyright © 2018 Zakary Kurzawski. All rights reserved.
 //
+//  Fill the dice array
+//
 
 import Foundation
 
@@ -28,12 +30,12 @@ class DiceArrayFill {
                 repeat {
                     randValue = Int(arc4random_uniform(UInt32(diceSize)) + 1)
                     if (diceSize == 6 && d6Choice == true){
-                        results.append(Dice(imageName: "trad_img\(randValue)", value: "\(randValue)"))
+                        results.append(Dice(imageName: "trad_img\(randValue)", value: "\(randValue)", diceType: "D 6"))
                     } else if (diceSize == 50){
                         percentileValue = percetileDiceAssignment(rollValue: (randValue * 2))
-                        results.append(Dice(imageName: "d%img" + percentileValue , value: percentileValue))
+                        results.append(Dice(imageName: "d%img" + percentileValue , value: percentileValue, diceType: "D %"))
                     } else {
-                        results.append(Dice(imageName: "d\(diceSize)img\(randValue)", value: "\(randValue)"))
+                        results.append(Dice(imageName: "d\(diceSize)img\(randValue)", value: "\(randValue)", diceType: "D \(diceSize)"))
                     }
                     index += 1
                 } while (index < Int(diceQtyArr[i]))

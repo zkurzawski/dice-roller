@@ -5,25 +5,27 @@
 //  Created by Zakary Kurzawski on 3/30/18.
 //  Copyright © 2018 Zakary Kurzawski. All rights reserved.
 //
+//  Changes image for d6 image type button and sets boolean value
+//  for image type selected to be used in Dice Array filling
+//
 
 import Foundation
 import UIKit
 
-func d6TypeSelected(btnPushed: UIButton, btnNotPushed: UIButton, d6Chosen: Bool) {
-    let regD6 = UIImage(named:  "d6img5.png") as UIImage?
-    let dimD6 = UIImage(named: "d6dim.png") as UIImage?
-    let regTrad6 = UIImage(named: "trad_img5.png") as UIImage?
-    let dimTrad6 = UIImage(named: "trad_dim") as UIImage?
+func d6TypeSelected(d6SelectBtn: UIButton, d6Chosen: Bool) -> Bool {
+
+    var d6Trad = d6Chosen
     
-    if d6Chosen {
-        btnNotPushed.setImage(dimD6, for: UIControlState.normal)
-        btnPushed.setImage(regTrad6, for: UIControlState.normal)
-        
+    let d6Selected = UIImage(named: "appearanceBtnTrad6Dim.png") as UIImage?
+    let tradSelected = UIImage(named: "appearanceBtnD6Dim.png") as UIImage?
+    
+    if d6Trad {
+        d6SelectBtn.setImage(d6Selected, for: UIControlState.normal)
+        d6Trad = false
     } else {
-        btnNotPushed.setImage(dimTrad6, for: UIControlState.normal)
-        btnPushed.setImage(regD6, for: UIControlState.normal)
+        d6SelectBtn.setImage(tradSelected, for: UIControlState.normal)
+        d6Trad = true
     }
-//    print("d6 selected")
-//    btnNotPushed.setImage(image2, for: UIControlState.normal)
-//    btnPushed.setImage(image, for: UIControlState.normal)
+    
+    return d6Trad
 }

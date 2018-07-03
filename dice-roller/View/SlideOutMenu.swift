@@ -5,6 +5,8 @@
 //  Created by Zakary Kurzawski on 1/12/18.
 //  Copyright © 2018 Zakary Kurzawski. All rights reserved.
 //
+//  Visual attributes of the options menu
+//
 
 import UIKit
 

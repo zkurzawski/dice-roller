@@ -10,20 +10,21 @@ import UIKit
 
 class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+//  Main View Element IBOutlets
     @IBOutlet weak var mainView: UIView!
-    
-    @IBOutlet weak var tradBtn: UIButton!
-    @IBOutlet weak var ddBtn: UIButton!
-
-    @IBOutlet weak var rollBtn: ButtonAppearance!
-    @IBOutlet weak var viewConstraint: NSLayoutConstraint!
-   
-//    test button for accesibility
     @IBOutlet weak var optionsButton: UIButton!
+    @IBOutlet weak var rollBtn: ButtonAppearance!
+    @IBOutlet weak var rollResultsLbl: UILabel!
+    @IBOutlet weak var startingDirectionLbl: UILabel!
+    @IBOutlet weak var diceCollectionView: UICollectionView!
+
+//  Sliding Menu View IBOtlet
+    @IBOutlet weak var viewConstraint: NSLayoutConstraint!
+    
+//  Sliding Menu Element IBOutlets
     @IBOutlet weak var closeOptionsBtn: UIButton!
     
-    @IBOutlet weak var startingDirectionLbl: UILabel!
-    
+//  Dice Quantity Selection Stepper IBOutlets
     @IBOutlet weak var d4Stepper: UIStepper!
     @IBOutlet weak var d6Stepper: UIStepper!
     @IBOutlet weak var d8Stepper: UIStepper!
@@ -32,6 +33,7 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var d20Stepper: UIStepper!
     @IBOutlet weak var d100Stepper: UIStepper!
     
+//  Dice Quantity Selection Label IBOutlets
     @IBOutlet weak var d4QtyLbl: UILabel!
     @IBOutlet weak var d6QtyLbl: UILabel!
     @IBOutlet weak var d8QtyLbl: UILabel!
@@ -40,112 +42,129 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var d20QtyLbl: UILabel!
     @IBOutlet weak var d100QtyLbl: UILabel!
     
-    @IBOutlet weak var diceCollectionView: UICollectionView!
+//  D6 Image Style Selection Button IBOutlet
+    @IBOutlet weak var d6StyleBtn: UIButton!
+    
     
     var diceQtyLblsArr:[UILabel] = []
     var diceStepperArr:[UIStepper] = []
     var diceQtyArr:[Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-    var hiddenBtns:[UIButton] = []
-    var hiddenLbls:[UILabel] = []
-    
+
     var diceQty = 1
-    var diceSize = 6
+    
     var d6Choice = true
     
     var dieHasBeenSelected = false
     
-    var diceTypeQty = [Int]()
-    var diceTypeQtyLbls = [UILabel]()
-        
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
-        
         accessibilityValueInitializer(rollBtn: rollBtn, optionsBtn: optionsButton, closeBtn: closeOptionsBtn)
- 
+        
         diceStepperArr = [d4Stepper, d6Stepper, d8Stepper, d10Stepper,d12Stepper, d20Stepper, d100Stepper]
         diceQtyLblsArr = [d4QtyLbl, d6QtyLbl, d8QtyLbl, d10QtyLbl, d12QtyLbl, d20QtyLbl, d100QtyLbl]
-        
-        hiddenLbls = [startingDirectionLbl]
-        hiddenBtns = [optionsButton, rollBtn]
-        
+
         diceCollectionView.delegate = self
         diceCollectionView.dataSource = self
        
+//  Set the starting position of the sliding menu based on device size
         if self.view.frame.width > 600{
             viewConstraint.constant = -460
-            
         } else {
             viewConstraint.constant = -340
         }
+        
+        d6StyleBtn.accessibilityLabel = "D 6 Appearance"
+        d6StyleBtn.accessibilityValue = d6BtnAccessibilityValueAssignment(d6Choice: d6Choice)
+
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
     
+//  Shake phone to roll dice
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        print("you shook me")
-        diceRolled()
+        if viewConstraint.constant < 0 && dieHasBeenSelected {
+            diceRolled()
+        }
     }
     
+//  Define number of collection view cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dice.count
     }
     
+//  Fill collection view cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "diceCell", for: indexPath) as? DiceCell {
             let dice = self.dice[indexPath.row]
             cell.updateViews(dice: dice)
+            cell.isAccessibilityElement = true
+            cell.accessibilityValue = "\(dice.diceType), value \(dice.value)"
             return cell
         }
         return DiceCell()
     }
-    
-    func diceRolled() {
-        if dieHasBeenSelected{
-            startingDirectionLbl.isHidden = true
-        }
-        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
-        diceCollectionView.reloadData()
-    }
-    
+
+//  Define size of collection view cells based on device size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width: CGFloat
         if self.view.frame.width > 600 {
             width = ((self.view.frame.size.width - 20) / 6)
         } else {
             width = ((self.view.frame.size.width - 20) / 5)
-        }
+        }   
         let height = width
-//        let height = (width * 1.7)
         return CGSize(width: width, height: height)
     }
-    
+
+//  Fill dice array, reload collection view, hide directions from main view
+    func diceRolled() {
+        diceCollectionView.collectionViewLayout.invalidateLayout()
+        dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
+        diceCollectionView.reloadData()
+        diceCollectionView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: false)
+        if dieHasBeenSelected{
+            startingDirectionLbl.isHidden = true
+            if UIAccessibilityIsVoiceOverRunning() {
+                rollResultsLbl.isHidden = false
+                UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, rollResultsLbl)
+            } else {
+                rollResultsLbl.isHidden = true
+            }
+        }
+    }
+
+//  Open options menu button for accessibility
     @IBAction func openOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = true
-        accessibilityOpenMenu(viewConstraint: viewConstraint, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: true, dieSelected: dieHasBeenSelected)
+        accessibilityOpenMenu(viewConstraint: viewConstraint, optionsBtn: optionsButton, rollBtn: rollBtn, menuCloseBtn: closeOptionsBtn, userDirections: startingDirectionLbl, view: self.view)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: true, dieSelected: dieHasBeenSelected)
     }
-    
+//  Close options menu for accessibility
     @IBAction func closeOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = false
-        accessibilityCloseMenu(viewConstraint: viewConstraint, screenWidth: self.view.frame.width, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, view: self.view, diceRolled: dieHasBeenSelected)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false, dieSelected: dieHasBeenSelected)
+        accessibilityCloseMenu(viewConstraint: viewConstraint, screenWidth: self.view.frame.width, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, resultsLbl: rollResultsLbl, view: self.view, diceRolled: dieHasBeenSelected)
+        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
     
+//  Swipe left to close options menu
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
         leftSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
-        hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
+//  Swipe right to open options menu
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
         rightSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
     }
     
+//  Roll button IBAction
     @IBAction func rollBtn(_ sender: UIButton) {
         diceRolled()
     }
     
+    
+//  Dice type quantity stepper IBActions
     @IBAction func d4Step(_ sender: UIStepper) {
         diceQtyArr[0] = diceStepSelection(stepValue: sender, stepLbl: d4QtyLbl)
         dieHasBeenSelected = true
@@ -175,22 +194,18 @@ class DiceRollerVC: UIViewController, UICollectionViewDelegate, UICollectionView
         dieHasBeenSelected = true
     }
     
+//  Clear all dice selection choices, unhide directions label
     @IBAction func menuReset(_ sender: UIButton) {
-        diceQtyArr = ResetButton.instance.resetAllMenuItems(diceQtyLbls: diceQtyLblsArr, diceStepVal: diceStepperArr)
+        diceQtyArr = resetAllBtn(diceQtyLbl: diceQtyLblsArr, diceStepperVal: diceStepperArr)
         dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
         diceCollectionView.reloadData()
         startingDirectionLbl.isHidden = false
         dieHasBeenSelected = false
     }
-    
-    @IBAction func ddBtnPushed(_ sender: UIButton) {
-        d6Choice = false
-        d6TypeSelected(btnPushed: ddBtn, btnNotPushed: tradBtn, d6Chosen: d6Choice)
+
+//  Select d6 image style
+    @IBAction func d6StyleBtnPushed(_ sender: UIButton) {
+        d6Choice = d6TypeSelected(d6SelectBtn: d6StyleBtn, d6Chosen: d6Choice)
+        d6StyleBtn.accessibilityValue = d6BtnAccessibilityValueAssignment(d6Choice: d6Choice)
     }
-    
-    @IBAction func tradBtnPushed(_ sender: UIButton) {
-        d6Choice = true
-        d6TypeSelected(btnPushed: tradBtn, btnNotPushed: ddBtn, d6Chosen: d6Choice)
-    }
-    
 }
