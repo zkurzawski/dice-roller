@@ -11,12 +11,13 @@
 import Foundation
 import UIKit
 
-func resetAllBtn(diceQtyLbl: [UILabel], diceStepperVal: [UIStepper]) -> [Double] {
+func resetAllBtn(diceQtyLbl: [UILabel], diceStepperVal: [UIStepper], rollResults: UILabel) -> [Double] {
     let diceQtyArr = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     
     for i in 0...6 {
         diceQtyLbl[i].text = "0"
         diceStepperVal[i].value = 0.0
     }
+    rollResults.isHidden = true
     return diceQtyArr
 }

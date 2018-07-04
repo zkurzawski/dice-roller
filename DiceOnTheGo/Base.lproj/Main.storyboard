@@ -60,15 +60,6 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right for options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-tH-iYJ">
-                                        <rect key="frame" x="117.99999999999999" y="90" width="177.66666666666663" height="23.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="0.31297089041095888" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
-                                        </variation>
-                                    </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
                                         <rect key="frame" x="20" y="80" width="335" height="567"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -136,9 +127,7 @@
                                     <constraint firstAttribute="trailing" secondItem="HoG-ra-wzL" secondAttribute="trailing" constant="30" id="BEg-A0-0cj"/>
                                     <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" id="E6d-5e-OfY"/>
                                     <constraint firstAttribute="trailing" secondItem="s73-QZ-ps8" secondAttribute="trailing" id="EGT-7z-GSP"/>
-                                    <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="Yxd-tH-iYJ" secondAttribute="bottom" constant="30" id="GmU-dZ-ytg"/>
                                     <constraint firstItem="2so-WJ-eZJ" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="25" id="JFD-fd-Cva"/>
-                                    <constraint firstItem="Yxd-tH-iYJ" firstAttribute="centerX" secondItem="8Vh-4g-dob" secondAttribute="centerX" id="MbY-63-oDT"/>
                                     <constraint firstItem="VWK-BR-lgw" firstAttribute="centerY" secondItem="2so-WJ-eZJ" secondAttribute="centerY" id="Mcg-0F-ALw"/>
                                     <constraint firstItem="esE-4s-hC4" firstAttribute="top" secondItem="yoE-cG-RVR" secondAttribute="bottom" constant="10" id="Mjn-rG-caM">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
@@ -149,20 +138,11 @@
                                     <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="Y7o-Nb-NC7"/>
                                     <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" id="bAt-Jd-EYq"/>
                                     <constraint firstAttribute="trailing" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="cm0-CJ-UFE"/>
-                                    <constraint firstItem="Yxd-tH-iYJ" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" constant="90" id="pLF-e4-xT5"/>
                                     <constraint firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="20" id="ruz-wE-GeD"/>
                                     <constraint firstAttribute="trailing" secondItem="Kyn-rr-Uhu" secondAttribute="trailing" id="tKD-fP-OAu"/>
                                     <constraint firstItem="2so-WJ-eZJ" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" constant="45" id="x0k-uE-nxJ"/>
                                     <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="30" id="yfH-yq-geA"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Yxd-tH-iYJ"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="GmU-dZ-ytg"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideOutMenu" customModule="Dice_On_The_Go" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="812"/>
@@ -598,7 +578,7 @@
                                                                                 <bool key="isElement" value="NO"/>
                                                                             </accessibility>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                                            <color key="textColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="heightClass=regular-widthClass=regular">
                                                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>

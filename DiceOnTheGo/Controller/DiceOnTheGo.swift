@@ -144,30 +144,33 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
 //  Open options menu button for accessibility
     @IBAction func openOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = true
-        accessibilityOpenMenu(viewConstraint: viewConstraint, optionsBtn: optionsButton, rollBtn: rollBtn, menuCloseBtn: closeOptionsBtn, userDirections: startingDirectionLbl, view: self.view)
+        menuOpen(viewConstraint: viewConstraint, view: self.view)
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, closeOptionsBtn)
         hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: true, dieSelected: dieHasBeenSelected)
     }
+
 //  Close options menu for accessibility
     @IBAction func closeOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = false
-        accessibilityCloseMenu(viewConstraint: viewConstraint, screenWidth: self.view.frame.width, optionsBtn: optionsButton, rollBtn: rollBtn, userDirections: startingDirectionLbl, resultsLbl: rollResultsLbl, view: self.view, diceRolled: dieHasBeenSelected)
+        menuClose(viewConstraint: viewConstraint, view: self.view, screenWidth: self.view.frame.width)
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, rollBtn)
         hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
     
 //  Swipe left to close options menu
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
-        leftSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
+        menuClose(viewConstraint: viewConstraint, view: self.view, screenWidth: self.view.frame.width)
     }
+    
 //  Swipe right to open options menu
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
-        rightSwipeActivated(viewConstraint: viewConstraint, swipeInfo: sender, screenWidth: self.view.frame.width)
+        menuOpen(viewConstraint: viewConstraint, view: self.view)
     }
     
 //  Roll button IBAction
     @IBAction func rollBtn(_ sender: UIButton) {
         diceRolled()
     }
-    
     
 //  Dice type quantity stepper IBActions
     @IBAction func d4Step(_ sender: UIStepper) {
@@ -201,7 +204,7 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
 //  Clear all dice selection choices, unhide directions label
     @IBAction func menuReset(_ sender: UIButton) {
-        diceQtyArr = resetAllBtn(diceQtyLbl: diceQtyLblsArr, diceStepperVal: diceStepperArr)
+        diceQtyArr = resetAllBtn(diceQtyLbl: diceQtyLblsArr, diceStepperVal: diceStepperArr, rollResults: rollResultsLbl)
         dice = DiceArrayFill.instance.arrayFill(diceQty: diceQty, d6Choice: d6Choice, diceQtyArr: diceQtyArr)
         diceCollectionView.reloadData()
         startingDirectionLbl.isHidden = false
