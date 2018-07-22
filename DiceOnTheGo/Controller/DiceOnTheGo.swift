@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 import GoogleMobileAds
 
 class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -58,10 +59,12 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     var dieHasBeenSelected = false
     
-    
     private(set) public var dice: [Dice] = []
     
     override func viewDidLoad() {
+        
+        reviewRequest()
+        
         accessibilityValueInitializer(rollBtn: rollBtn, optionsBtn: optionsButton, closeBtn: closeOptionsBtn)
         
         diceStepperArr = [d4Stepper, d6Stepper, d8Stepper, d10Stepper,d12Stepper, d20Stepper, d100Stepper]
