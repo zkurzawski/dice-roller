@@ -82,7 +82,7 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
         d6StyleBtn.accessibilityLabel = "D 6 Appearance"
         d6StyleBtn.accessibilityValue = d6BtnAccessibilityValueAssignment(d6Choice: d6Choice)
         
-        gadBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        gadBanner.adUnitID = "ca-app-pub-9271193537343384/5073221688"
         gadBanner.rootViewController = self
         gadBanner.load(GADRequest())
     }

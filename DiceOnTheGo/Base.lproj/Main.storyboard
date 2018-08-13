@@ -30,7 +30,7 @@
                                     </imageView>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-4s-hC4" customClass="ButtonAppearance" customModule="Dice_On_The_Go" customModuleProvider="target">
                                         <rect key="frame" x="50" y="657" width="275" height="53"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="ROLL">
                                             <color key="titleColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -48,13 +48,13 @@
                                             <action selector="openOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkV-eJ-0hM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set your dice quantities and types before rolling by swiping right or tapping the options button at the top of the screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right or tap the options button at the top of the screen to select dice types and quantities" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
                                         <rect key="frame" x="30" y="305.66666666666669" width="315" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="cZQ-Hn-LBU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
-                                        <color key="textColor" red="0.70588235294117652" green="0.65490196078431373" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
@@ -178,7 +178,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-Xt-fFA" customClass="ButtonAppearance" customModule="Dice_On_The_Go" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="730.66666666666663" width="220" height="30"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <accessibility key="accessibilityConfiguration" label="Reset  all"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="T0E-Pt-NbK">
