@@ -13,6 +13,8 @@ import UIKit
 
 class AccessibilityDiceQtyStepper: UIView {
     
+//    Assign the elements for dice selection accessibility
+    
     static let DICE_TYPE_TAG = 1
     static let STEPPER_TAG = 3
     static let DICE_QTY_TAG = 2
@@ -38,6 +40,8 @@ class AccessibilityDiceQtyStepper: UIView {
         return viewWithTag(AccessibilityDiceQtyStepper.STEPPER_TAG) as! UIStepper
     }
     
+//    Assign accessibility label, hint (none), and traits (none) to be announced when selected.
+    
     override public var accessibilityLabel: String? {
         get { return "Dice type \(diceTypeLabel.text!), Current Quantity \(diceQtyLabel.text!)" }
         set {}
@@ -58,6 +62,8 @@ class AccessibilityDiceQtyStepper: UIView {
         set {}
     }
     
+//    Increment the dice value with accessibility enabled
+    
     override public func accessibilityIncrement() {
         stepper.value += stepper.stepValue
         stepper.sendActions(for: UIControlEvents.valueChanged)
@@ -66,6 +72,8 @@ class AccessibilityDiceQtyStepper: UIView {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!), Maximum quantity reached", comment: ""))
         }
     }
+    
+//    Decrement the dice value with accessibility enabled
     
     override public func accessibilityDecrement() {
         stepper.value -= stepper.stepValue

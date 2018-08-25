@@ -5,7 +5,8 @@
 //  Created by Zakary Kurzawski on 1/18/18.
 //  Copyright © 2018 Zakary Kurzawski. All rights reserved.
 //
-//  Fill the dice array
+//  Fill the dice array. Assigns random values within the dice quantity parameters and fills an array with
+//  the proper file names for outputting to the results collection view.
 //
 
 import Foundation
@@ -13,6 +14,9 @@ import Foundation
 class DiceArrayFill {
     
     static let instance = DiceArrayFill()
+    
+//    Assigning the values into array to be outputted. Assigns based on whether traditional or table top dice or percentile
+//    dice were selected.
     
     func arrayFill(diceQty: Int, d6Choice: Bool, diceQtyArr: [Double]) -> [Dice] {
         
@@ -43,7 +47,7 @@ class DiceArrayFill {
         }
         return results
     }
-    
+
     func diceSizeAssignment(indexValue: Int) -> Int {
         var diceSize = 0
         

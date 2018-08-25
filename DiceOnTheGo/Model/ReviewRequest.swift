@@ -31,6 +31,7 @@ func reviewRequest() {
     
 }
 
+// Limit the call to iOS 10.3 or higher only
 func makeRequest() {
     if #available(iOS 10.3, *){
         SKStoreReviewController.requestReview()
