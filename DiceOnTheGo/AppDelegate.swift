@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-9271193537343384~4259350387")
+        GADMobileAds.configure(withApplicationID: "PLACE APP ID HERE FOR AdMob")
         let currentCount = UserDefaults.standard.integer(forKey: "launchCount")
         UserDefaults.standard.set(currentCount+1, forKey:"launchCount")
         UserDefaults.standard.synchronize()
