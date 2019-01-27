@@ -92,7 +92,7 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
 //  Shake phone to roll dice
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if viewConstraint.constant < 0 && dieHasBeenSelected {
             diceRolled()
         }
@@ -135,9 +135,9 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
         diceCollectionView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: false)
         if dieHasBeenSelected{
             startingDirectionLbl.isHidden = true
-            if UIAccessibilityIsVoiceOverRunning() {
+            if UIAccessibility.isVoiceOverRunning {
                 rollResultsLbl.isHidden = false
-                UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, rollResultsLbl)
+                UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: rollResultsLbl)
             } else {
                 rollResultsLbl.isHidden = true
             }
@@ -148,7 +148,7 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBAction func openOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = true
         menuOpen(viewConstraint: viewConstraint, view: self.view)
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, closeOptionsBtn)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: closeOptionsBtn)
         hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: true, dieSelected: dieHasBeenSelected)
     }
 
@@ -156,7 +156,7 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBAction func closeOptions(_ sender: UIButton) {
         mainView.accessibilityElementsHidden = false
         menuClose(viewConstraint: viewConstraint, view: self.view, screenWidth: self.view.frame.width)
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, rollBtn)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: rollBtn)
         hideUnhideMainViewElements(optionsBtn: optionsButton, rollBtn: rollBtn, dirLbl: startingDirectionLbl, resultsLbl: rollResultsLbl, onOff: false, dieSelected: dieHasBeenSelected)
     }
     

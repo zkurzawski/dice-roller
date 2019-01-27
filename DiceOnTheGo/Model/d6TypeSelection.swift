@@ -20,10 +20,10 @@ func d6TypeSelected(d6SelectBtn: UIButton, d6Chosen: Bool) -> Bool {
     let tradSelected = UIImage(named: "appearanceBtnD6Dim.png") as UIImage?
     
     if d6Trad {
-        d6SelectBtn.setImage(d6Selected, for: UIControlState.normal)
+        d6SelectBtn.setImage(d6Selected, for: UIControl.State.normal)
         d6Trad = false
     } else {
-        d6SelectBtn.setImage(tradSelected, for: UIControlState.normal)
+        d6SelectBtn.setImage(tradSelected, for: UIControl.State.normal)
         d6Trad = true
     }
     

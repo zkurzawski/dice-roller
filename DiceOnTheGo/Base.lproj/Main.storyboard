@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +27,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-4s-hC4" customClass="ButtonAppearance" customModule="Dice_On_The_Go" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="657" width="275" height="53"/>
+                                        <rect key="frame" x="50" y="719" width="275" height="53"/>
                                         <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="ROLL">
@@ -49,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right or tap the options button at the top of the screen to select dice types and quantities" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
-                                        <rect key="frame" x="30" y="305.66666666666669" width="315" height="200"/>
+                                        <rect key="frame" x="30" y="306" width="315" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="cZQ-Hn-LBU"/>
                                         </constraints>
@@ -61,7 +59,7 @@
                                         </variation>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-cG-RVR">
-                                        <rect key="frame" x="20" y="80" width="335" height="567"/>
+                                        <rect key="frame" x="20" y="80" width="335" height="629"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="10" id="PVm-nA-NCW">
                                             <size key="itemSize" width="0.0" height="0.0"/>
@@ -99,7 +97,7 @@
                                         </cells>
                                     </collectionView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWK-BR-lgw">
-                                        <rect key="frame" x="135.33333333333334" y="45" width="105.66666666666666" height="27.333333333333329"/>
+                                        <rect key="frame" x="134.66666666666666" y="45" width="105.66666666666666" height="27.333333333333329"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -134,6 +132,7 @@
                                     </constraint>
                                     <constraint firstAttribute="bottomMargin" secondItem="Kyn-rr-Uhu" secondAttribute="bottom" id="OZR-F5-pb6"/>
                                     <constraint firstItem="HoG-ra-wzL" firstAttribute="centerY" secondItem="8Vh-4g-dob" secondAttribute="centerY" id="Qpy-jz-zQ4"/>
+                                    <constraint firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="40" id="RLU-OR-kn8"/>
                                     <constraint firstItem="Kyn-rr-Uhu" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" id="VYH-Zz-PGb"/>
                                     <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="Y7o-Nb-NC7"/>
                                     <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" id="bAt-Jd-EYq"/>
@@ -143,6 +142,17 @@
                                     <constraint firstItem="2so-WJ-eZJ" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" constant="45" id="x0k-uE-nxJ"/>
                                     <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="30" id="yfH-yq-geA"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Kyn-rr-Uhu"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="3zk-jF-ujf"/>
+                                        <exclude reference="OZR-F5-pb6"/>
+                                        <exclude reference="VYH-Zz-PGb"/>
+                                        <exclude reference="tKD-fP-OAu"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideOutMenu" customModule="Dice_On_The_Go" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="812"/>
@@ -163,7 +173,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Quantities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-vg-nEq">
-                                                    <rect key="frame" x="81.666666666666671" y="65" width="157.33333333333331" height="22"/>
+                                                    <rect key="frame" x="81.333333333333329" y="65" width="157.33333333333337" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="DJR-ev-iDS">
                                                             <variation key="heightClass=regular-widthClass=regular" constant="40"/>
@@ -177,7 +187,7 @@
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-Xt-fFA" customClass="ButtonAppearance" customModule="Dice_On_The_Go" customModuleProvider="target">
-                                                    <rect key="frame" x="50" y="730.66666666666663" width="220" height="30"/>
+                                                    <rect key="frame" x="50" y="728.66666666666663" width="220" height="30"/>
                                                     <color key="backgroundColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <accessibility key="accessibilityConfiguration" label="Reset  all"/>
                                                     <constraints>
@@ -209,7 +219,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe left to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-XO-GLS">
-                                                    <rect key="frame" x="90.000000000000014" y="780.66666666666663" width="141.33333333333337" height="23.333333333333371"/>
+                                                    <rect key="frame" x="89.333333333333329" y="768.66666666666663" width="141.33333333333337" height="23.333333333333371"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <bool key="isElement" value="NO"/>
                                                     </accessibility>
@@ -458,7 +468,7 @@
                                                             <rect key="frame" x="0.0" y="160" width="300" height="30"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sGf-7y-XFo">
-                                                                    <rect key="frame" x="5" y="-1.3333333333333428" width="290.66666666666669" height="33"/>
+                                                                    <rect key="frame" x="5" y="-1.3333333333333428" width="290" height="33"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-jm-FMn">
                                                                             <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="33"/>
@@ -473,7 +483,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYo-Pi-DbV">
-                                                                            <rect key="frame" x="80.333333333333329" y="0.0" width="7.3333333333333286" height="33"/>
+                                                                            <rect key="frame" x="80" y="0.0" width="7.3333333333333286" height="33"/>
                                                                             <accessibility key="accessibilityConfiguration">
                                                                                 <bool key="isElement" value="NO"/>
                                                                             </accessibility>
@@ -485,7 +495,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-Rd-LdG">
-                                                                            <rect key="frame" x="120" y="0.0" width="44" height="33"/>
+                                                                            <rect key="frame" x="119.66666666666666" y="0.0" width="44" height="33"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                                             <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
@@ -494,7 +504,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <stepper opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2H6-Ju-N9Q">
-                                                                            <rect key="frame" x="196.66666666666666" y="0.0" width="93.999999999999972" height="29"/>
+                                                                            <rect key="frame" x="196" y="0.0" width="94" height="29"/>
                                                                             <color key="tintColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <connections>
                                                                                 <action selector="d12Step:" destination="BYZ-38-t0r" eventType="valueChanged" id="kRf-RA-guT"/>
@@ -680,7 +690,7 @@
                                                 <constraint firstItem="Ilz-D5-fKw" firstAttribute="top" secondItem="GH6-Vd-HiU" secondAttribute="bottom" constant="5" id="18Z-nH-e2E"/>
                                                 <constraint firstItem="gFX-vg-nEq" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="65" id="1mN-rK-oYY"/>
                                                 <constraint firstItem="lMH-yR-BwJ" firstAttribute="top" secondItem="ACi-EE-Bzp" secondAttribute="top" constant="40" id="61a-EG-KjM"/>
-                                                <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="8" id="BdB-Oc-cPh"/>
+                                                <constraint firstAttribute="bottom" secondItem="SCF-XO-GLS" secondAttribute="bottom" constant="20" id="BdB-Oc-cPh"/>
                                                 <constraint firstItem="GH6-Vd-HiU" firstAttribute="leading" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="10" id="LLD-AO-KKV"/>
                                                 <constraint firstItem="DQH-dR-bKY" firstAttribute="top" secondItem="Ilz-D5-fKw" secondAttribute="bottom" constant="5" id="SGx-xW-Uhc"/>
                                                 <constraint firstItem="SCF-XO-GLS" firstAttribute="centerX" secondItem="ACi-EE-Bzp" secondAttribute="centerX" id="UUz-z0-HqW"/>
@@ -691,7 +701,7 @@
                                                 </constraint>
                                                 <constraint firstItem="Lvl-Xt-fFA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ACi-EE-Bzp" secondAttribute="leading" constant="50" id="q8G-Qy-hfe"/>
                                                 <constraint firstAttribute="trailing" secondItem="Lvl-Xt-fFA" secondAttribute="trailing" constant="50" id="t8E-ul-M42"/>
-                                                <constraint firstItem="SCF-XO-GLS" firstAttribute="top" secondItem="Lvl-Xt-fFA" secondAttribute="bottom" constant="20" id="u2g-z4-58N"/>
+                                                <constraint firstItem="SCF-XO-GLS" firstAttribute="top" secondItem="Lvl-Xt-fFA" secondAttribute="bottom" constant="10" id="u2g-z4-58N"/>
                                                 <constraint firstAttribute="trailing" secondItem="GH6-Vd-HiU" secondAttribute="trailing" constant="10" id="xRA-Zq-mYA"/>
                                                 <constraint firstAttribute="trailing" secondItem="DQH-dR-bKY" secondAttribute="trailing" constant="82" id="xV8-rz-Zjn">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="60"/>

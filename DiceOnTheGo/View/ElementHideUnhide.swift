@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 func hideUnhideMainViewElements(optionsBtn: UIButton, rollBtn: UIButton, dirLbl: UILabel, resultsLbl: UILabel, onOff: Bool, dieSelected: Bool) {
-    if UIAccessibilityIsVoiceOverRunning(){
+    if UIAccessibility.isVoiceOverRunning{
         optionsBtn.isHidden = onOff
         rollBtn.isHidden = onOff
     }

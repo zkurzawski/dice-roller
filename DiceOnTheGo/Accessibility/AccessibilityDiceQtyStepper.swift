@@ -58,7 +58,7 @@ class AccessibilityDiceQtyStepper: UIView {
     }
     
     override public var accessibilityTraits: UIAccessibilityTraits {
-        get { return UIAccessibilityTraitAdjustable }
+        get { return UIAccessibilityTraits.adjustable }
         set {}
     }
     
@@ -66,10 +66,10 @@ class AccessibilityDiceQtyStepper: UIView {
     
     override public func accessibilityIncrement() {
         stepper.value += stepper.stepValue
-        stepper.sendActions(for: UIControlEvents.valueChanged)
-        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!)", comment: ""))
+        stepper.sendActions(for: UIControl.Event.valueChanged)
+        UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!)", comment: ""))
         if stepper.value == 10.0 {
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!), Maximum quantity reached", comment: ""))
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!), Maximum quantity reached", comment: ""))
         }
     }
     
@@ -77,10 +77,10 @@ class AccessibilityDiceQtyStepper: UIView {
     
     override public func accessibilityDecrement() {
         stepper.value -= stepper.stepValue
-        stepper.sendActions(for: UIControlEvents.valueChanged)
-        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!)", comment: ""))
+        stepper.sendActions(for: UIControl.Event.valueChanged)
+        UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!)", comment: ""))
         if stepper.value == 0.0 {
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!), Minimum quantity reached", comment: ""))
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: NSLocalizedString("Dice Type \(diceTypeLabel.text!), Quantity \(diceQtyLabel.text!), Minimum quantity reached", comment: ""))
         }
     }
     

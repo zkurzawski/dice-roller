@@ -23,31 +23,12 @@
 		3CB62E6A20094E2800D8D72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6820094E2800D8D72A /* Main.storyboard */; };
 		3CB62E6C20094E2800D8D72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6B20094E2800D8D72A /* Assets.xcassets */; };
 		3CB62E6F20094E2800D8D72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB62E6D20094E2800D8D72A /* LaunchScreen.storyboard */; };
-		3CB62E7A20094E2800D8D72A /* dice_rollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E7920094E2800D8D72A /* dice_rollerTests.swift */; };
-		3CB62E8520094E2800D8D72A /* dice_rollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */; };
 		3CB62E962009AD1200D8D72A /* DiceOnTheGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E952009AD1200D8D72A /* DiceOnTheGo.swift */; };
 		3CB62E9C2009B7BB00D8D72A /* SlideOutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9B2009B7BB00D8D72A /* SlideOutMenu.swift */; };
 		3CB62E9E2009BA1900D8D72A /* BlurMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB62E9D2009BA1900D8D72A /* BlurMenu.swift */; };
 		3CD4B756206F302E00509C53 /* d6TypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4B755206F302E00509C53 /* d6TypeSelection.swift */; };
 		3CE8815D2063476700ACAE8E /* DiceStepSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8815C2063476700ACAE8E /* DiceStepSelection.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3CB62E7620094E2800D8D72A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB62E5920094E2800D8D72A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB62E6020094E2800D8D72A;
-			remoteInfo = "dice-roller";
-		};
-		3CB62E8120094E2800D8D72A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB62E5920094E2800D8D72A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB62E6020094E2800D8D72A;
-			remoteInfo = "dice-roller";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3C58F04F20DF1947002D5CDA /* AccessibilityDiceQtyStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityDiceQtyStepper.swift; sourceTree = "<group>"; };
@@ -68,10 +49,8 @@
 		3CB62E6B20094E2800D8D72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CB62E6E20094E2800D8D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CB62E7020094E2800D8D72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB62E7520094E2800D8D72A /* Dice On The GoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dice On The GoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E7920094E2800D8D72A /* dice_rollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dice_rollerTests.swift; sourceTree = "<group>"; };
 		3CB62E7B20094E2800D8D72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB62E8020094E2800D8D72A /* Dice On The GoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dice On The GoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB62E8420094E2800D8D72A /* dice_rollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dice_rollerUITests.swift; sourceTree = "<group>"; };
 		3CB62E8620094E2800D8D72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB62E952009AD1200D8D72A /* DiceOnTheGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceOnTheGo.swift; sourceTree = "<group>"; };
@@ -87,20 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C58F05F20EB0C3C002D5CDA /* GoogleMobileAds.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB62E7220094E2800D8D72A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB62E7D20094E2800D8D72A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB62E6120094E2800D8D72A /* Dice On The Go.app */,
-				3CB62E7520094E2800D8D72A /* Dice On The GoTests.xctest */,
-				3CB62E8020094E2800D8D72A /* Dice On The GoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,42 +197,6 @@
 			productReference = 3CB62E6120094E2800D8D72A /* Dice On The Go.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3CB62E7420094E2800D8D72A /* Dice On The GoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB62E8C20094E2800D8D72A /* Build configuration list for PBXNativeTarget "Dice On The GoTests" */;
-			buildPhases = (
-				3CB62E7120094E2800D8D72A /* Sources */,
-				3CB62E7220094E2800D8D72A /* Frameworks */,
-				3CB62E7320094E2800D8D72A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CB62E7720094E2800D8D72A /* PBXTargetDependency */,
-			);
-			name = "Dice On The GoTests";
-			productName = "dice-rollerTests";
-			productReference = 3CB62E7520094E2800D8D72A /* Dice On The GoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3CB62E7F20094E2800D8D72A /* Dice On The GoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB62E8F20094E2800D8D72A /* Build configuration list for PBXNativeTarget "Dice On The GoUITests" */;
-			buildPhases = (
-				3CB62E7C20094E2800D8D72A /* Sources */,
-				3CB62E7D20094E2800D8D72A /* Frameworks */,
-				3CB62E7E20094E2800D8D72A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CB62E8220094E2800D8D72A /* PBXTargetDependency */,
-			);
-			name = "Dice On The GoUITests";
-			productName = "dice-rollerUITests";
-			productReference = 3CB62E8020094E2800D8D72A /* Dice On The GoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,16 +210,6 @@
 					3CB62E6020094E2800D8D72A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-					};
-					3CB62E7420094E2800D8D72A = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 3CB62E6020094E2800D8D72A;
-					};
-					3CB62E7F20094E2800D8D72A = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 3CB62E6020094E2800D8D72A;
 					};
 				};
 			};
@@ -310,8 +227,6 @@
 			projectRoot = "";
 			targets = (
 				3CB62E6020094E2800D8D72A /* Dice On The Go */,
-				3CB62E7420094E2800D8D72A /* Dice On The GoTests */,
-				3CB62E7F20094E2800D8D72A /* Dice On The GoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,20 +239,6 @@
 				3CB62E6F20094E2800D8D72A /* LaunchScreen.storyboard in Resources */,
 				3CB62E6C20094E2800D8D72A /* Assets.xcassets in Resources */,
 				3CB62E6A20094E2800D8D72A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB62E7320094E2800D8D72A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB62E7E20094E2800D8D72A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,36 +269,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CB62E7120094E2800D8D72A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB62E7A20094E2800D8D72A /* dice_rollerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB62E7C20094E2800D8D72A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB62E8520094E2800D8D72A /* dice_rollerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3CB62E7720094E2800D8D72A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CB62E6020094E2800D8D72A /* Dice On The Go */;
-			targetProxy = 3CB62E7620094E2800D8D72A /* PBXContainerItemProxy */;
-		};
-		3CB62E8220094E2800D8D72A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CB62E6020094E2800D8D72A /* Dice On The Go */;
-			targetProxy = 3CB62E8120094E2800D8D72A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CB62E6820094E2800D8D72A /* Main.storyboard */ = {
@@ -541,13 +413,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = DiceOnTheGo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DiceOnTheGo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zakary.kurzawski.DiceOnTheGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -563,80 +435,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = DiceOnTheGo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DiceOnTheGo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zakary.kurzawski.DiceOnTheGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3CB62E8D20094E2800D8D72A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P3X39S6BZ;
-				INFOPLIST_FILE = "dice-rollerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "zakary.kurzawski.dice-rollerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice On The Go.app/Dice On The Go";
-			};
-			name = Debug;
-		};
-		3CB62E8E20094E2800D8D72A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P3X39S6BZ;
-				INFOPLIST_FILE = "dice-rollerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "zakary.kurzawski.dice-rollerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice On The Go.app/Dice On The Go";
-			};
-			name = Release;
-		};
-		3CB62E9020094E2800D8D72A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P3X39S6BZ;
-				INFOPLIST_FILE = "dice-rollerUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "zakary.kurzawski.dice-rollerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "dice-roller";
-			};
-			name = Debug;
-		};
-		3CB62E9120094E2800D8D72A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P3X39S6BZ;
-				INFOPLIST_FILE = "dice-rollerUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "zakary.kurzawski.dice-rollerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "dice-roller";
 			};
 			name = Release;
 		};
@@ -657,24 +463,6 @@
 			buildConfigurations = (
 				3CB62E8A20094E2800D8D72A /* Debug */,
 				3CB62E8B20094E2800D8D72A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CB62E8C20094E2800D8D72A /* Build configuration list for PBXNativeTarget "Dice On The GoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CB62E8D20094E2800D8D72A /* Debug */,
-				3CB62E8E20094E2800D8D72A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CB62E8F20094E2800D8D72A /* Build configuration list for PBXNativeTarget "Dice On The GoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CB62E9020094E2800D8D72A /* Debug */,
-				3CB62E9120094E2800D8D72A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
