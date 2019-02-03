@@ -8,7 +8,6 @@
 
 import UIKit
 import StoreKit
-import GoogleMobileAds
 
 class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -47,7 +46,6 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
 //  D6 Image Style Selection Button IBOutlet
     @IBOutlet weak var d6StyleBtn: UIButton!
     
-    @IBOutlet weak var gadBanner: GADBannerView!
     
     var diceQtyLblsArr:[UILabel] = []
     var diceStepperArr:[UIStepper] = []
@@ -81,10 +79,6 @@ class DiceOnTheGo: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         d6StyleBtn.accessibilityLabel = "D 6 Appearance"
         d6StyleBtn.accessibilityValue = d6BtnAccessibilityValueAssignment(d6Choice: d6Choice)
-        
-        gadBanner.adUnitID = "ca-app-pub-9271193537343384/5073221688"
-        gadBanner.rootViewController = self
-        gadBanner.load(GADRequest())
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

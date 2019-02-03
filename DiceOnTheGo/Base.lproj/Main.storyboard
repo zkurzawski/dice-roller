@@ -47,10 +47,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right or tap the options button at the top of the screen to select dice types and quantities" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoG-ra-wzL">
-                                        <rect key="frame" x="30" y="306" width="315" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="cZQ-Hn-LBU"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="335" width="335" height="142.33333333333337"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -102,27 +99,12 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-rr-Uhu" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="720" width="375" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" label="Advertisment"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="GeM-7i-Evk">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                            </constraint>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="VWK-BR-lgw" firstAttribute="centerX" secondItem="8Vh-4g-dob" secondAttribute="centerX" id="0H7-8A-RH4"/>
                                     <constraint firstItem="yoE-cG-RVR" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="20" id="3MB-LU-mH6"/>
-                                    <constraint firstItem="Kyn-rr-Uhu" firstAttribute="top" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="10" id="3zk-jF-ujf">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                    </constraint>
-                                    <constraint firstItem="esE-4s-hC4" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="50" id="78o-5h-ctc"/>
                                     <constraint firstItem="yoE-cG-RVR" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" constant="80" id="81P-tf-ktO"/>
-                                    <constraint firstAttribute="trailing" secondItem="HoG-ra-wzL" secondAttribute="trailing" constant="30" id="BEg-A0-0cj"/>
                                     <constraint firstItem="s73-QZ-ps8" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" id="E6d-5e-OfY"/>
                                     <constraint firstAttribute="trailing" secondItem="s73-QZ-ps8" secondAttribute="trailing" id="EGT-7z-GSP"/>
                                     <constraint firstItem="2so-WJ-eZJ" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="25" id="JFD-fd-Cva"/>
@@ -130,37 +112,25 @@
                                     <constraint firstItem="esE-4s-hC4" firstAttribute="top" secondItem="yoE-cG-RVR" secondAttribute="bottom" constant="10" id="Mjn-rG-caM">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Kyn-rr-Uhu" secondAttribute="bottom" id="OZR-F5-pb6"/>
-                                    <constraint firstItem="HoG-ra-wzL" firstAttribute="centerY" secondItem="8Vh-4g-dob" secondAttribute="centerY" id="Qpy-jz-zQ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="HoG-ra-wzL" secondAttribute="trailing" constant="20" id="MqL-nY-lZr"/>
+                                    <constraint firstItem="HoG-ra-wzL" firstAttribute="centerY" secondItem="8Vh-4g-dob" secondAttribute="centerY" id="NsN-ug-NjZ"/>
                                     <constraint firstAttribute="bottom" secondItem="esE-4s-hC4" secondAttribute="bottom" constant="40" id="RLU-OR-kn8"/>
-                                    <constraint firstItem="Kyn-rr-Uhu" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" id="VYH-Zz-PGb"/>
                                     <constraint firstAttribute="bottom" secondItem="s73-QZ-ps8" secondAttribute="bottom" id="Y7o-Nb-NC7"/>
+                                    <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="20" id="aDB-A2-eg7"/>
                                     <constraint firstItem="s73-QZ-ps8" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" id="bAt-Jd-EYq"/>
-                                    <constraint firstAttribute="trailing" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="cm0-CJ-UFE"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="esE-4s-hC4" secondAttribute="trailing" constant="50" id="qcZ-zY-qnU"/>
                                     <constraint firstAttribute="trailing" secondItem="yoE-cG-RVR" secondAttribute="trailing" constant="20" id="ruz-wE-GeD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kyn-rr-Uhu" secondAttribute="trailing" id="tKD-fP-OAu"/>
                                     <constraint firstItem="2so-WJ-eZJ" firstAttribute="top" secondItem="8Vh-4g-dob" secondAttribute="top" constant="45" id="x0k-uE-nxJ"/>
-                                    <constraint firstItem="HoG-ra-wzL" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="30" id="yfH-yq-geA"/>
+                                    <constraint firstItem="esE-4s-hC4" firstAttribute="leading" secondItem="8Vh-4g-dob" secondAttribute="leading" constant="50" id="zWj-Tm-ikg"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Kyn-rr-Uhu"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="3zk-jF-ujf"/>
-                                        <exclude reference="OZR-F5-pb6"/>
-                                        <exclude reference="VYH-Zz-PGb"/>
-                                        <exclude reference="tKD-fP-OAu"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmm-pF-ogb" customClass="SlideOutMenu" customModule="Dice_On_The_Go" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="812"/>
                                 <subviews>
-                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Bv-45f" customClass="BlurMenu" customModule="Dice_On_The_Go" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7" width="320" height="736"/>
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Bv-45f" customClass="BlurMenu" customModule="Dice_On_The_Go" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="812"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ACi-EE-Bzp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="812"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMH-yR-BwJ">
@@ -760,7 +730,6 @@
                         <outlet property="d8QtyLbl" destination="zB2-hO-wBt" id="Oa8-3j-CFQ"/>
                         <outlet property="d8Stepper" destination="TjK-CF-dPg" id="Jdz-6Q-FCr"/>
                         <outlet property="diceCollectionView" destination="yoE-cG-RVR" id="Av5-jW-wHD"/>
-                        <outlet property="gadBanner" destination="Kyn-rr-Uhu" id="kvb-vv-k8U"/>
                         <outlet property="mainView" destination="8Vh-4g-dob" id="AUt-RA-Me0"/>
                         <outlet property="optionsButton" destination="2so-WJ-eZJ" id="gcN-K4-3QZ"/>
                         <outlet property="rollBtn" destination="esE-4s-hC4" id="Agb-Pn-I4T"/>
